@@ -2,13 +2,6 @@ set $TERMINAL urxvt
 set $mod Mod4
 # Mod1 is Alt
 # Mod4 is Windows
-set $launcher dmenu_run -i -nb '#393939' -nf '#48B685' -sb '#dfefe2' -sf '#393939'
-
-# colors
-set $bgcolor 393939
-set $fgcolor 48B685
-set $txtcolor DFEFE2
-set $urgent EF6155
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -28,26 +21,10 @@ font pango:monospace 8
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# start a terminal
-# bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec $TERMINAL
-bindsym $mod+Shift+Return exec $TERMINAL -cd "`xcwd`"
-
-# start applications
-bindsym $mod+F3 exec $TERMINAL -e 'ranger'
-bindsym $mod+Ctrl+m exec $TERMINAL -e 'alsamixer'
 
 
 # kill focused window
 bindsym $mod+Shift+q kill
-
-# start dmenu (a program launcher)
-# bindsym $mod+d exec dmenu_run
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
-bindsym $mod+d exec $launcher
 
 # change focus
 bindsym $mod+j focus left
@@ -105,12 +82,12 @@ set $ws1 "1:browser"
 set $ws2 "2:ranger"
 set $ws3 "3:wiki"
 set $ws4 "4:terminal"
-set $ws5 "5"
+set $ws5 "5:browser"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
-set $ws10 "10"
+set $ws10 "10:calibre"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -175,23 +152,52 @@ bindsym $mod+r mode "resize"
 # bar {
 #         status_command i3status
 # }
+
+# startup
+exec --no-startup-id redshift
+exec --no-startup-id feh --bg-scale --randomize --no-fehbg /home/vik/Documents/_data/_walls/*
+# start terminal and firefox at startup in workspace 4 & 1
+exec --no-startup-id i3-msg 'workspace $ws4; exec $TERMINAL; workspace $ws2; exec $TERMINAL -e ranger; workspace $ws1; exec firefox;'
+
+# applications shortcuts
+bindsym $mod+F3 exec $TERMINAL -e 'ranger'
+bindsym $mod+Ctrl+m exec $TERMINAL -e 'alsamixer'
+# start a terminal
+# bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec $TERMINAL
+bindsym $mod+Shift+Return exec $TERMINAL -cd "`xcwd`"
+
+# colors
+set $bgcolor 00293c
+set $fgcolor 5ea8a7
+set $txtcolor f0eff0
+set $urgent ff4447
+set $border 5ea8a7
+
+set $launcher dmenu_run -i -nb '#00293c' -nf '#f0eff0' -sb '#5ea8a7' -sf '#00293c'
+# start dmenu (a program launcher)
+# bindsym $mod+d exec dmenu_run
+# There also is the (new) i3-dmenu-desktop which only displays applications
+# shipping a .desktop file. It is a wrapper around dmenu, so you need that
+# installed.
+# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+d exec $launcher
+
+
 bar {
   colors {
     background #$bgcolor
     statusline #$txtcolor
-    separator #$txtcolor
-    focused_workspace #$fgcolor #%fgcolor #$txtcolor
+    separator #$fgcolor
+    focused_workspace #$fgcolor #$bgcolor #$txtcolor
     inactive_workspace #$bgcolor #$bgcolor #$txtcolor
   }
 
-  font xft:monospace regular 8
+  #font xft:monospace regular 8
+  font pango:DejaVu Sans Mono, FontAwesome 8
   position bottom
   status_command i3status -c ~/.config/i3/i3status.conf
 }
-
-exec --no-startup-id redshift
-exec --no-startup-id feh --bg-scale --randomize --no-fehbg /home/vik/Documents/_data/_walls/*
-
 
 mode  "Passthrough Mode - Press mod+F12 to exit" {
         bindsym $mod+F12 mode "default"
@@ -203,22 +209,22 @@ bindsym $mod+F12 mode "Passthrough Mode - Press mod+F12 to exit"
 
 # lock screen
 # bindsym $mod+Control+l exec i3lock -c 0000AA
-bindsym $mod+Control+l exec i3lock -i ~/walls/2.png
+bindsym $mod+Control+l exec i3lock -i /home/vik/Documents/_data/_walls/ColdShoulder.png
 
 # border style
-new_window pixel 1
-new_float normal
+default_border pixel 1
 
 # Hide borders
-hide_edge_borders none
+hide_edge_borders both
+
+# Layout colors            border       bg        text
+client.focused             #$border #$border #$txtcolor
+client.unfocused           #$border #$border #$txtcolor
+client.focused_inactive    #$border #$border #$txtcolor
+client.urgent              #$urgent    #$bgcolor  #$txtcolor
+client.background          #$bgcolor
 
 
-# Layout colors            bord      bg        text
-client.focused             #$fgcolor #$bgcolor #$txtcolor
-client.unfocused           #$bgcolor #$bgcolor #BBBBBB
-client.focused_inactive    #$bgcolor #$bgcolor #$txtcolor
-client.urgent              #$bgcolor #$bgcolor #$urgent
-client.background          #121212
 
-
-
+# always start URxvt in workspace 4
+# assign [class="URxvt"] $ws4
