@@ -86,7 +86,7 @@ set $ws5 "5:browser"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
-set $ws9 "9"
+set $ws9 "9:citi"
 set $ws10 "10:calibre"
 
 # switch to workspace
@@ -157,7 +157,8 @@ bindsym $mod+r mode "resize"
 exec --no-startup-id redshift
 exec --no-startup-id feh --bg-scale --randomize --no-fehbg /home/vik/Documents/_data/_walls/*
 # start terminal and firefox at startup in workspace 4 & 1
-exec --no-startup-id i3-msg 'workspace $ws4; exec $TERMINAL; workspace $ws2; exec $TERMINAL -e ranger; workspace $ws1; exec firefox;'
+exec --no-startup-id i3-msg 'workspace $ws4; exec $TERMINAL; workspace $ws2; exec $TERMINAL -e ranger; workspace $ws3; exec $TERMINAL -e vim -c VimwikiIndex; workspace $ws1; exec firefox;'
+# exec_always $TERMINAL -e vim -c VimwikiIndex
 
 # applications shortcuts
 bindsym $mod+F3 exec $TERMINAL -e 'ranger'
@@ -196,7 +197,8 @@ bar {
   #font xft:monospace regular 8
   font pango:DejaVu Sans Mono, FontAwesome 8
   position bottom
-  status_command i3status -c ~/.config/i3/i3status.conf
+  #status_command i3status -c ~/.config/i3/i3status.conf
+  status_command i3blocks
 }
 
 mode  "Passthrough Mode - Press mod+F12 to exit" {
@@ -228,3 +230,25 @@ client.background          #$bgcolor
 
 # always start URxvt in workspace 4
 # assign [class="URxvt"] $ws4
+assign [class="(?i)vmware-view"] $ws9
+assign [class="calibre"] $ws10
+
+
+# Pulse Audio controls
+bindsym XF86AudioRaiseVolume exec "amixer -c 1 -- sset Master 1dB+"
+#volume
+bindsym XF86AudioLowerVolume exec "amixer -c 1 -- sset Master 1dB-"
+#volume
+bindsym XF86AudioMute exec "amixer sset Master toggle"
+
+# Media player controls
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+
+# Sreen brightness controls, using acpilight
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+
+# end
