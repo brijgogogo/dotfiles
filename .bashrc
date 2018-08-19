@@ -11,6 +11,8 @@ fi
 
 # aliases
 alias ll='ls -la'
+alias ls='ls --color=auto'
+alias vimwiki='vim -c VimwikiIndex'
 
 
 # prompt
@@ -27,9 +29,6 @@ export PATH=$JAVA_HOME/bin:$PATH
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
 #PS1='[\u@\h \W]\$ '
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
-
