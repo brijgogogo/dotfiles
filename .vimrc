@@ -60,6 +60,10 @@ nnoremap <leader>ip :source $MYVIMRC<cr>:PlugInstall<cr>
 nnoremap <leader>v :tabedit $MYVIMRC<cr>
 nnoremap <leader>b :tabedit ~/.bashrc<cr>
 
+" alt - j/k inserts line below/above
+nnoremap <silent><C-j> :set paste<CR>m`o<Esc>``:set nopaste<CR>
+nnoremap <silent><C-k> :set paste<CR>m`O<Esc>``:set nopaste<CR>
+
 " fzf.vim mappints
 nmap <leader>; :Buffers<cr>
 nmap <leader>f :Files<cr>
@@ -97,10 +101,6 @@ command! Bdall %bd|e#|bd#
 abbr conosle console
 abbr comopnent component
 
-" debugging helpers
-autocmd BufEnter *.js iabbr xxx console.log('XXX',
-autocmd BufEnter *.js iabbr yyy console.log('YYY',
-autocmd BufEnter *.js iabbr zzz console.log('ZZZ',
 
 " window size: increaseby 1.5 or decrease by 0.67
 nnoremap <silent> <leader>+ :exe "resize " . (winheight(0) * 3/2)<cr>
@@ -188,8 +188,6 @@ let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
 " remove all trailing whitespace on save
 autocmd BufWritePre * %s/\s\+$//e
 
-autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
-autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 
 " typescript-vim settings
 let g:typescript_compiler_binary = 'tsc' " :make to run tsc
@@ -266,7 +264,6 @@ augroup resCur
   autocmd BufReadPost * call setpos(".", getpos("'\""))
 augroup END
 
-
 """"""""""""""""""""""""""""""""""""
 " hide status line when running fzf
 """"""""""""""""""""""""""""""""""""
@@ -296,3 +293,39 @@ autocmd FileType calendar nmap <buffer> <CR> :<C-u>call vimwiki#diary#calendar_a
 
 let g:calendar_google_calendar = 1
 let g:calendar_google_task = 1
+
+
+"""""""""""""""""""""""""""
+" Java
+"""""""""""""""""""""""""""
+augroup Java
+  autocmd!
+  autocmd FileType java nnoremap <buffer> <leader>b :!javac %<cr>
+  autocmd FileType java nnoremap <buffer> <leader>B :!javac *.java<cr>
+  autocmd FileType java nnoremap <buffer> <leader>m :!java <c-r>=expand("%:t:r")<cr><cr>
+  autocmd FileType java nnoremap <buffer> <leader>c :normal I//<esc>
+augroup END
+
+
+"""""""""""""""""""""""""""
+" Javascript
+"""""""""""""""""""""""""""
+augroup JavaScriptsCmds
+  " clears out the autocmds of this group previously loaded
+  autocmd!
+  autocmd Filetype javascript nnoremap <buffer> <leader>r :!node %<cr>
+  autocmd Filetype javascript nnoremap <buffer> <leader>c gI//<esc>
+  autocmd Filetype javascript vnoremap <buffer> <leader>C :normal gI//<esc>
+augroup END
+
+autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
+
+" debugging helpers
+autocmd BufEnter *.js iabbr xxx console.log('XXX',
+autocmd BufEnter *.js iabbr yyy console.log('YYY',
+autocmd BufEnter *.js iabbr zzz console.log('ZZZ',
+
+"""""""""""""""""""""""""""
+" text, markdown
+"""""""""""""""""""""""""""
+autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
