@@ -1,4 +1,5 @@
 set $TERMINAL urxvt
+set $TERMINAL_CLASS "^URxvt$"
 set $mod Mod4
 # Mod1 is Alt
 # Mod4 is Windows
@@ -75,6 +76,12 @@ bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
+
+# Make the currently focused window a scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# Show the first scratchpad window
+bindsym $mod+minus scratchpad show
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -162,11 +169,14 @@ exec --no-startup-id i3-msg 'workspace $ws4; exec $TERMINAL; workspace $ws2; exe
 
 # applications shortcuts
 bindsym $mod+F3 exec $TERMINAL -e 'ranger'
-bindsym $mod+Ctrl+m exec $TERMINAL -e 'alsamixer'
+#bindsym $mod+Ctrl+m exec $TERMINAL -e 'alsamixer'
+bindsym $mod+Ctrl+m exec $TERMINAL -name alsamixer -e 'alsamixer'
+for_window [class=$TERMINAL_CLASS instance="^alsamixer$"] floating enable
 # start a terminal
 # bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Return exec $TERMINAL
 bindsym $mod+Shift+Return exec $TERMINAL -cd "`xcwd`"
+
 
 # colors
 set $bgcolor 00293c
@@ -175,15 +185,24 @@ set $txtcolor f0eff0
 set $urgent ff4447
 set $border 5ea8a7
 
-set $launcher dmenu_run -i -nb '#00293c' -nf '#f0eff0' -sb '#5ea8a7' -sf '#00293c'
+#set $launcher dmenu_run -i -nb '#00293c' -nf '#f0eff0' -sb '#5ea8a7' -sf '#00293c'
 # start dmenu (a program launcher)
 # bindsym $mod+d exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+
+# rofi bindings
+set $launcher "rofi -show-icons -modi combi -show combi -combi-modi window,drun"
+#bindsym F9  exec "rofi -show-icons -modi combi -show combi -combi-modi run,drun"
+bindsym F9  exec $launcher
+bindsym F12 exec rofi -show-icons -show window
+
 bindsym $mod+d exec $launcher
 
+# hide/unhide i3status bar
+bindsym $mod+m bar mode toggle
 
 bar {
   colors {
@@ -211,7 +230,15 @@ bindsym $mod+F12 mode "Passthrough Mode - Press mod+F12 to exit"
 
 # lock screen
 # bindsym $mod+Control+l exec i3lock -c 0000AA
-bindsym $mod+Control+l exec i3lock -i /home/vik/Documents/_data/_walls/ColdShoulder.png
+#bindsym $mod+Control+l exec i3lock -i /home/vik/Documents/_data/_walls/lock_screen.png
+
+# using i3lock-color
+# bindsym $mod+Control+l exec ~/.config/i3/lock.sh
+
+# using i3lock-clor + betterlockscreen
+bindsym $mod+Control+l exec ~/.config/i3/betterlockscreen.sh -l
+#exec_always --no-startup-id ~/.config/i3/betterlockscreen.sh -u ~/Documents/_data/_walls
+exec --no-startup-id ~/.config/i3/betterlockscreen.sh -u ~/Documents/_data/_walls
 
 # border style
 default_border pixel 1
