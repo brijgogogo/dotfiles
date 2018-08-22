@@ -177,6 +177,22 @@ for_window [class=$TERMINAL_CLASS instance="^alsamixer$"] floating enable
 bindsym $mod+Return exec $TERMINAL
 bindsym $mod+Shift+Return exec $TERMINAL -cd "`xcwd`"
 
+# Set shut down, restart and locking features
+bindsym $mod+x mode "$mode_system"
+set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (p)oweroff
+mode "$mode_system" {
+    bindsym l exec --no-startup-id ~/.config/i3/i3exit.sh lock, mode "default"
+    bindsym s exec --no-startup-id ~/.config/i3/i3exit.sh suspend, mode "default"
+    bindsym u exec --no-startup-id ~/.config/i3/i3exit.sh switch_user, mode "default"
+    bindsym e exec --no-startup-id ~/.config/i3/i3exit.sh logout, mode "default"
+    bindsym h exec --no-startup-id ~/.config/i3/i3exit.sh hibernate, mode "default"
+    bindsym r exec --no-startup-id ~/.config/i3/i3exit.sh reboot, mode "default"
+    bindsym p exec --no-startup-id ~/.config/i3/i3exit.sh shutdown, mode "default"
+
+    # exit system mode: "Enter" or "Escape"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
 
 # colors
 set $bgcolor 00293c
@@ -198,6 +214,9 @@ set $launcher "rofi -show-icons -modi combi -show combi -combi-modi window,drun"
 #bindsym F9  exec "rofi -show-icons -modi combi -show combi -combi-modi run,drun"
 bindsym F9  exec $launcher
 bindsym F12 exec rofi -show-icons -show window
+bindsym $mod+c exec --no-startup-id "rofi -show calc -modi calc -no-show-match -no-sort"
+
+#$mod+Escape
 
 bindsym $mod+d exec $launcher
 
@@ -226,7 +245,7 @@ mode  "Passthrough Mode - Press mod+F12 to exit" {
 bindsym $mod+F12 mode "Passthrough Mode - Press mod+F12 to exit"
 
 # screenshot
-# bindsym Print exec scrot ~/Pictures/Screenshots/screenshot_%Y_%m_%d_%H_%M_%S.png
+bindsym Print exec scrot ~/Documents/screenshot_%Y_%m_%d_%H_%M_%S.png
 
 # lock screen
 # bindsym $mod+Control+l exec i3lock -c 0000AA
