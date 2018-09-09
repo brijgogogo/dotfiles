@@ -26,6 +26,8 @@ Plug 'tpope/vim-surround'
 Plug 'vimwiki/vimwiki'
 Plug 'tpope/vim-vinegar'
 Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 " Plug 'mattn/calendar-vim'
 Plug 'itchyny/calendar.vim'
 
@@ -332,3 +334,32 @@ autocmd BufEnter *.js iabbr zzz console.log('ZZZ',
 " text, markdown
 """""""""""""""""""""""""""
 autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
+
+"""""""""""""""""""""""""""
+" statusline
+"""""""""""""""""""""""""""
+function! GitBranch()
+  return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
+endfunction
+
+function! StatuslineGit()
+  let l:branchname = GitBranch()
+  return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
+endfunction
+
+set statusline=
+"set statusline+=%#PmenuSel#
+set statusline+=%#CursorColumn#
+set statusline+=%{StatuslineGit()}
+set statusline+=%#LineNr#
+set statusline+=\ %f
+"set statusline+=%R\ %m\ %n
+set statusline+=\ [%n%H%M%R%W]\ " flags and buf no
+set statusline+=%=
+"set statusline+=%#CursorColumn#
+set statusline+=\ %b
+set statusline+=\ %y
+set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
+set statusline+=\[%{&fileformat}\]
+set statusline+=\ %p%%
+set statusline+=\ %l:%c
