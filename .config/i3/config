@@ -85,16 +85,16 @@ bindsym $mod+minus scratchpad show
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1:browser"
-set $ws2 "2:ranger"
-set $ws3 "3:wiki"
-set $ws4 "4:terminal"
-set $ws5 "5:browser"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9:citi"
-set $ws10 "10:calibre"
+set $ws1 "1:"
+set $ws2 "2:"
+set $ws3 "3:"
+set $ws4 "4:"
+set $ws5 "5:"
+set $ws6 "6:"
+set $ws7 "7:"
+set $ws8 "8:"
+set $ws9 "9:"
+set $ws10 "10:"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -246,6 +246,7 @@ bindsym $mod+F12 mode "Passthrough Mode - Press mod+F12 to exit"
 
 # screenshot
 bindsym Print exec scrot ~/Documents/screenshot_%Y_%m_%d_%H_%M_%S.png
+bindsym $mod+Print exec scrot -s ~/Documents/screenshot_%Y_%m_%d_%H_%M_%S.png
 
 # lock screen
 # bindsym $mod+Control+l exec i3lock -c 0000AA

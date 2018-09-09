@@ -43,6 +43,7 @@ Plug 'junegunn/limelight.vim'
 "syntax
 Plug 'leafgarland/typescript-vim'
 " Plug 'leshill/vim-json'
+Plug 'ap/vim-css-color'
 
 Plug 'jiangmiao/auto-pairs'
 Plug 'Quramy/tsuquyomi'
@@ -135,7 +136,9 @@ set smartcase
 nnoremap <leader><space> :nohlsearch<CR>
 
 " vimwiki
-let g:vimwiki_list =[{'path':'/home/vik/Dropbox/vimwiki'}]
+let wiki1 = {'path':'/home/vik/Dropbox/vimwiki'}
+let wiki2 = {'path':'/home/vik/Documents/wiki', 'ext':'.md'}
+let g:vimwiki_list =[wiki1, wiki2]
 nnoremap <leader>wn :lnext<CR>
 nnoremap <leader>wp :lprev<CR>
 nnoremap <leader>w<cr> :VimwikiSplitLink<cr>
