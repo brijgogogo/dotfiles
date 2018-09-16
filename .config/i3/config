@@ -246,7 +246,8 @@ bindsym $mod+F12 mode "Passthrough Mode - Press mod+F12 to exit"
 
 # screenshot
 bindsym Print exec scrot ~/Documents/screenshot_%Y_%m_%d_%H_%M_%S.png
-bindsym $mod+Print exec scrot -s ~/Documents/screenshot_%Y_%m_%d_%H_%M_%S.png
+bindsym --release $mod+Print exec scrot -s ~/Documents/screenshot_%Y_%m_%d_%H_%M_%S.png
+bindsym --release $mod+Shift+Print exec scrot -u -d 4 ~/Documents/screenshot_%Y_%m_%d_%H_%M_%S.png
 
 # lock screen
 # bindsym $mod+Control+l exec i3lock -c 0000AA
