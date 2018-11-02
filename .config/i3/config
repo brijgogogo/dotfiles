@@ -7,22 +7,10 @@ set $mod Mod4
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 font pango:monospace 8
-
-# This font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
-
-# Before i3 v4.8, we used to recommend this one as the default:
-# font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-# The font above is very space-efficient, that is, it looks good, sharp and
-# clear in small sizes. However, its unicode glyph coverage is limited, the old
-# X core fonts rendering does not support right-to-left and this being a bitmap
-# font, it doesn’t scale on retina/hidpi displays.
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
-
-
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -164,7 +152,8 @@ bindsym $mod+r mode "resize"
 exec --no-startup-id redshift
 exec --no-startup-id feh --bg-scale --randomize --no-fehbg /home/vik/Documents/_data/_walls/*
 # start terminal and firefox at startup in workspace 4 & 1
-exec --no-startup-id i3-msg 'workspace $ws4; exec $TERMINAL; workspace $ws2; exec $TERMINAL -e ranger; workspace $ws3; exec $TERMINAL -e vim -c VimwikiIndex; workspace $ws1; exec firefox;'
+#exec --no-startup-id i3-msg 'workspace $ws4; exec $TERMINAL; workspace $ws2; exec $TERMINAL -e ranger; workspace $ws3; exec $TERMINAL -e vim -c VimwikiIndex; workspace $ws1; exec firefox;'
+exec --no-startup-id i3-msg 'workspace $ws4; exec $TERMINAL; workspace $ws2; exec $TERMINAL -e ranger; workspace $ws1; exec firefox;'
 # exec_always $TERMINAL -e vim -c VimwikiIndex
 
 # applications shortcuts
@@ -195,10 +184,15 @@ mode "$mode_system" {
 }
 
 # colors
-set $bgcolor 00293c
-set $fgcolor 5ea8a7
+#set $bgcolor 00293c
+set $bgcolor 002b36
+#set $fgcolor 5ea8a7
+set $fgcolor 268bd2
 set $txtcolor f0eff0
-set $urgent ff4447
+set $faded_txt_color 657b83
+#set $urgent ff4447
+#set $urgent cb4b16
+set $urgent dc322f
 set $border 5ea8a7
 
 #set $launcher dmenu_run -i -nb '#00293c' -nf '#f0eff0' -sb '#5ea8a7' -sf '#00293c'
@@ -210,14 +204,12 @@ set $border 5ea8a7
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # rofi bindings
-set $launcher "rofi -show-icons -modi combi -show combi -combi-modi window,drun"
-#bindsym F9  exec "rofi -show-icons -modi combi -show combi -combi-modi run,drun"
-bindsym F9  exec $launcher
-bindsym F12 exec rofi -show-icons -show window
+#set $launcher "rofi -show-icons -modi combi -show combi -combi-modi window,drun"
+set $launcher "rofi -show-icons -show drun"
+#bindsym F9  exec $launcher
+bindsym $mod+o exec rofi -show-icons -show window
 bindsym $mod+c exec --no-startup-id "rofi -show calc -modi calc -no-show-match -no-sort"
-
 #$mod+Escape
-
 bindsym $mod+d exec $launcher
 
 # hide/unhide i3status bar
@@ -227,9 +219,11 @@ bar {
   colors {
     background #$bgcolor
     statusline #$txtcolor
-    separator #$fgcolor
+    separator #$faded_txt_color
+    # border background text
     focused_workspace #$fgcolor #$bgcolor #$txtcolor
     inactive_workspace #$bgcolor #$bgcolor #$txtcolor
+    urgent_workspace #$urgent #$urgent #$txtcolor
   }
 
   #font xft:monospace regular 8
@@ -274,13 +268,10 @@ client.focused_inactive    #$border #$border #$txtcolor
 client.urgent              #$urgent    #$bgcolor  #$txtcolor
 client.background          #$bgcolor
 
-
-
 # always start URxvt in workspace 4
 # assign [class="URxvt"] $ws4
 assign [class="(?i)vmware-view"] $ws9
 assign [class="calibre"] $ws10
-
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec "amixer -c 1 -- sset Master 1dB+"

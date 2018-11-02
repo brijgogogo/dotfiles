@@ -13,6 +13,7 @@ fi
 alias ll='ls -la'
 alias ls='ls --color=auto'
 alias vimwiki='vim -c VimwikiIndex'
+alias define='googler -n 2 define'
 
 
 # prompt
@@ -37,3 +38,5 @@ export PATH=$JAVA_HOME/bin:$PATH
 if [ -f ~/.git-completion.bash ]; then
   source ~/.git-completion.bash
 fi
+
+export XDG_CONFIG_HOME=~/.config

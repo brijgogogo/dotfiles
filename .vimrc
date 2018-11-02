@@ -46,6 +46,8 @@ Plug 'junegunn/limelight.vim'
 Plug 'leafgarland/typescript-vim'
 " Plug 'leshill/vim-json'
 Plug 'ap/vim-css-color'
+Plug 'OmniSharp/Omnisharp-vim'
+"Plug 'tpope/vim-dispatch'
 
 Plug 'jiangmiao/auto-pairs'
 Plug 'Quramy/tsuquyomi'
@@ -367,3 +369,7 @@ set statusline+=\ %l:%c
 
 
 "set clipboard=unnamed     " access your system clipboard
+
+" Omnisharp
+let g:OmniSharp_server_type = 'roslyn'
+let g:OmniSharp_prefer_global_sln = 1
