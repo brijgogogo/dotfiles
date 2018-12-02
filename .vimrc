@@ -48,6 +48,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'ap/vim-css-color'
 Plug 'OmniSharp/Omnisharp-vim'
 "Plug 'tpope/vim-dispatch'
+Plug 'Valloric/YouCompleteMe'
 
 Plug 'jiangmiao/auto-pairs'
 Plug 'Quramy/tsuquyomi'
@@ -140,8 +141,8 @@ set smartcase
 nnoremap <leader><space> :nohlsearch<CR>
 
 " vimwiki
-let wiki1 = {'path':'/home/vik/Dropbox/vimwiki'}
-let wiki2 = {'path':'/home/vik/Documents/wiki', 'ext':'.md'}
+let wiki1 = {'path':'/home/vik/Documents/wiki', 'ext':'.md'}
+let wiki2 = {'path':'/home/vik/Documents/_data/_cloud/dropbox/vimwiki'}
 let g:vimwiki_list =[wiki1, wiki2]
 nnoremap <leader>wn :lnext<CR>
 nnoremap <leader>wp :lprev<CR>

@@ -149,11 +149,12 @@ bindsym $mod+r mode "resize"
 # }
 
 # startup
+exec_always --no-startup-id xrdb -load ~/.Xresources
 exec --no-startup-id redshift
 exec --no-startup-id feh --bg-scale --randomize --no-fehbg /home/vik/Documents/_data/_walls/*
 # start terminal and firefox at startup in workspace 4 & 1
 #exec --no-startup-id i3-msg 'workspace $ws4; exec $TERMINAL; workspace $ws2; exec $TERMINAL -e ranger; workspace $ws3; exec $TERMINAL -e vim -c VimwikiIndex; workspace $ws1; exec firefox;'
-exec --no-startup-id i3-msg 'workspace $ws4; exec $TERMINAL; workspace $ws2; exec $TERMINAL -e ranger; workspace $ws1; exec firefox;'
+#exec --no-startup-id i3-msg 'workspace $ws4; exec $TERMINAL; workspace $ws2; exec $TERMINAL -e ranger; workspace $ws1; exec firefox;'
 # exec_always $TERMINAL -e vim -c VimwikiIndex
 
 # applications shortcuts
