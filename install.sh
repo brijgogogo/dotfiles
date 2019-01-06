@@ -12,8 +12,12 @@ ln -s ${BASEDIR}/.vimrc ~/.vimrc
 # bash
 ln -s ${BASEDIR}/.bashrc ~/.bashrc
 ln -s ${BASEDIR}/.bash_profile ~/.bash_profile
+ln -s ${BASEDIR}/.aliases.sh ~/.aliases.sh
 ln -s ${BASEDIR}/.shell_common_rc ~/.shell_common_rc
 
 # zsh:w
 ln -s ${BASEDIR}/.zshrc ~/.zshrc
+
+# mouse buttons
+ln -s ${BASEDIR}/.xbindkeysrc ~/.xbindkeysrc
 

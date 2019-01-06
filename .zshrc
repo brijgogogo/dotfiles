@@ -26,7 +26,7 @@ compinit
 
 # right prompt
 #RPROMPT='[%F{yellow}%?%f]'
-prompt walters
+#prompt walters
 
 # history search
 autoload -Uz up-line-or-beginning-search down-line-or-beginning-search

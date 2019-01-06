@@ -170,6 +170,7 @@ set linebreak
 set foldmethod=indent
 set foldnestmax=3
 set nofoldenable
+"set foldlevel=99
 
 " scrolling
 set scrolloff=8
@@ -374,3 +375,20 @@ set statusline+=\ %l:%c
 " Omnisharp
 let g:OmniSharp_server_type = 'roslyn'
 let g:OmniSharp_prefer_global_sln = 1
+
+" python
+au BufNewFile,BufRead *.py
+    \ set tabstop=4
+    \ set softtabstop=4
+    \ set shiftwidth=4
+    \ set textwidth=79
+    \ set expandtab
+    \ set autoindent
+    \ set fileformat=unix
+
+" js
+au BufNewFile,BufRead *.js, *.html, *.css
+    \ set tabstop=2
+    \ set softtabstop=2
+    \ set shiftwidth=2
+

@@ -93,27 +93,25 @@ URxvt*cursorBlink: false
 URxvt.saveLines: 12000
 !URxvt.boderLess: true
 URxvt.depth: 32
+
+
 ! perl extensions
-!URxvt.perl-ext-common: default,matcher,resize-font
-!URxvt.perl-ext-common: default,resize-font
 URxvt.perl-ext-common: default,matcher,keyboard-select,resize-font
-! ability to open url using mouse
+
+! matcher extension: ability to open url using mouse
 URxvt.matcher.button: 1
 URxvt.underlineURLs: true
-URxvt.url-launcher: /usr/bin/qutebrowser
+!URxvt.url-launcher: /usr/bin/qutebrowser
+!URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.url-launcher: /usr/bin/firefox
 URxvt.colorUL: #4682B4
 URxvt.keysym.C-Delete: perl:matcher:last
 URxvt.keysym.M-Delete: perl:matcher:list
 
+!keyboard-select extension
 URxvt.keysym.M-Escape: perl:keyboard-select:activate
 URxvt.keysym.M-s: perl:keyboard-select:search
 URxvt.keyboard-select.clipboard: true
-
-!URxvt.perl-ex: default,url-select
-!URxvt.keysum.M-u: perl:url-select:select_next
-!URxvt.url-select.launcher: /usr/bin/qutebrowser
-!URxvt.url-select.underline: true
-
 
 !!! rofi !!!
 rofi.theme:solarized
