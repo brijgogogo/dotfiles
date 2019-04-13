@@ -49,6 +49,7 @@ Plug 'ap/vim-css-color'
 Plug 'OmniSharp/Omnisharp-vim'
 "Plug 'tpope/vim-dispatch'
 Plug 'Valloric/YouCompleteMe'
+Plug 'mattn/emmet-vim'
 
 Plug 'jiangmiao/auto-pairs'
 Plug 'Quramy/tsuquyomi'
@@ -66,11 +67,11 @@ nnoremap <leader>ip :source $MYVIMRC<cr>:PlugInstall<cr>
 nnoremap <leader>v :tabedit $MYVIMRC<cr>
 nnoremap <leader>b :tabedit ~/.bashrc<cr>
 
-" alt - j/k inserts line below/above
+" inserts line below/above
 nnoremap <silent><C-j> :set paste<CR>m`o<Esc>``:set nopaste<CR>
 nnoremap <silent><C-k> :set paste<CR>m`O<Esc>``:set nopaste<CR>
 
-" fzf.vim mappints
+" fzf.vim mappings
 nmap <leader>; :Buffers<cr>
 nmap <leader>f :Files<cr>
 nmap <leader>t :Tags<cr>
@@ -369,8 +370,8 @@ set statusline+=\ %p%%
 set statusline+=\ %l:%c
 
 
-
-"set clipboard=unnamed     " access your system clipboard
+" install gvim for clipboard feature
+set clipboard=unnamedplus     "map vim :yank or :paste to system copy or paste
 
 " Omnisharp
 let g:OmniSharp_server_type = 'roslyn'

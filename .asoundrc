@@ -1,0 +1,7 @@
+#defaults.pcm.!device = 0
+#defaults.pcm.!card = 1
+pcm.!default {
+      type hw
+      card 0
+      device 4
+ }
