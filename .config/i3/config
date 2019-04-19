@@ -159,6 +159,7 @@ exec --no-startup-id feh --bg-scale --randomize --no-fehbg /home/vik/Documents/_
 
 # applications shortcuts
 bindsym $mod+F3 exec $TERMINAL -e 'ranger'
+bindsym $mod+F4 exec $TERMINAL -e 'vifm'
 #bindsym $mod+Ctrl+m exec $TERMINAL -e 'alsamixer'
 bindsym $mod+Ctrl+m exec $TERMINAL -name alsamixer -e 'alsamixer'
 for_window [class=$TERMINAL_CLASS instance="^alsamixer$"] floating enable
