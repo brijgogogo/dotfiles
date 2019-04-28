@@ -95,8 +95,8 @@ URxvt.saveLines: 12000
 URxvt.depth: 32
 
 
-! perl extensions
-URxvt.perl-ext-common: default,matcher,keyboard-select,resize-font
+!! perl extensions
+URxvt.perl-ext-common: default,matcher,url-select,keyboard-select,resize-font
 
 ! matcher extension: ability to open url using mouse
 URxvt.matcher.button: 1
@@ -108,10 +108,16 @@ URxvt.colorUL: #4682B4
 URxvt.keysym.C-Delete: perl:matcher:last
 URxvt.keysym.M-Delete: perl:matcher:list
 
+!!url-select
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.url-select.launcher: /usr/bin/firefox
+URxvt.url-select.underline: true
+
 !keyboard-select extension
 URxvt.keysym.M-Escape: perl:keyboard-select:activate
 URxvt.keysym.M-s: perl:keyboard-select:search
 URxvt.keyboard-select.clipboard: true
 
+
 !!! rofi !!!
-rofi.theme:solarized
+!rofi.theme:solarized

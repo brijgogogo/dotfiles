@@ -34,3 +34,9 @@ source /usr/share/nvm/init-nvm.sh
 # allow global node package installations for the current user
 PATH="$HOME/.node_modules/bin:$PATH"
 export npm_config_prefix=~/.node_modules
+
+# set my scripts path
+PATH="$HOME/Documents/_data/_cloud/dropbox/scripts:$PATH"
+
+
+XDG_DATA_DIRS=/usr/local/share:/usr/share

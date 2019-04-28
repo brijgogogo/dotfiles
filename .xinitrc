@@ -8,6 +8,9 @@
 # start i3
 exec i3
 
+# start dunst
+exec dunst
+
 # set random wallpaper
 #~/.fehbg &
 #feh --recursive --randomize --bg-fill ~/Dropbox/walls/* &

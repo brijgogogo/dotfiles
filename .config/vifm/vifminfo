@@ -9,6 +9,10 @@
 	/home/vik/bin/
 	..
 1555693448
+'d
+	/home/vik/Downloads
+	Glenn Harold - Develop A Powerful Memory
+1555778354
 'h
 	/home/vik/
 	..
@@ -25,7 +29,7 @@ al
 q0
 v2
 ov
-m80
+m66
 l2
 r16,2
 
@@ -237,6 +241,96 @@ d/home/vik/Documents/dotfiles/.config
 d/home/vik/Documents/dotfiles/.config/i3
 	config
 3
+d/home/vik/Documents/dotfiles/.config
+	i3
+1
+d/home/vik/Documents/dotfiles
+	.aliases.sh
+4
+d/home/vik/Documents
+	dotfiles
+4
+d/home/vik
+	Documents
+3
+d/home/vik/Documents
+	_data
+1
+d/home/vik/Documents/_data
+	_cloud
+3
+d/home/vik/Documents/_data/_cloud
+	dropbox
+1
+d/home/vik/Documents/_data/_cloud/dropbox
+	prachi_docs
+7
+d/home/vik/Documents/_data/_cloud/dropbox/prachi_docs
+	..
+0
+d/home/vik
+	Downloads
+4
+d/home/vik/Downloads
+	Game.of.Thrones.S08E02.1080p.WEB.x264-ADRENALiNE[ettv]
+12
+d/home/vik/Downloads/Game.of.Thrones.S08E02.1080p.WEB.x264-ADRENALiNE[ettv]
+	Downloaded from www.ettv.to .txt
+1
+d/home/vik/Downloads
+	Pulses.in.60.Ways.Peas.Beans.and._tils.9812612874.rar
+26
+d/home/vik
+	Documents
+3
+d/home/vik/Documents
+	_data
+1
+d/home/vik/Documents/_data
+	list10
+19
+d/home/vik/Documents
+	_data
+1
+d/home/vik
+	Documents
+3
+d/home
+	vik
+2
+d/
+	usr
+17
+d/usr
+	share
+8
+d/usr/share
+	icons
+33
+d/usr/share/icons
+	gnome
+4
+d/usr/share/icons/gnome
+	16x16
+2
+d/usr/share/icons/gnome/16x16
+	devices
+5
+d/usr/share/icons/gnome/16x16/devices
+	3floppy_unmount.png
+1
+d/usr/share/icons/gnome/16x16
+	emblems
+6
+d/usr/share/icons/gnome
+	16x16
+2
+d/usr/share/icons
+	gnome
+4
+d/home/vik
+	Dropbox
+5
 d
 
 # Right window history (oldest to newest):
@@ -345,6 +439,87 @@ D/home/vik/Documents/dotfiles/.config/vifm/colors
 D/home/vik/Documents/dotfiles/.config/vifm
 	vifminfo
 4
+D/home/vik/Documents/dotfiles/.config
+	vifm
+2
+D/home/vik/Documents/dotfiles
+	.config
+1
+D/home/vik/Documents
+	repos
+8
+D/home/vik/Documents/repos
+	js
+2
+D/home/vik/Documents/repos/js
+	favicon.ico
+6
+D/home/vik/Documents/repos
+	js
+2
+D/home/vik/Documents
+	repos
+8
+D/home/vik
+	Documents
+4
+D/home/vik/Documents
+	docs
+2
+D/home/vik/Documents/docs
+	..
+0
+D/home/vik/Documents
+	docs
+2
+D/home/vik/Documents/docs
+	.git
+1
+D/home/vik/Documents
+	_data
+1
+D/home/vik/Documents/_data
+	_docs
+5
+D/home/vik/Documents/_data/_docs
+	_me
+1
+D/home/vik/Documents/_data/_docs/_me
+	bike
+3
+D/home/vik/Documents/_data/_docs/_me/bike
+	PolicySchedule.pdf
+2
+D/home/vik/Documents/_data/_docs/_me
+	bike
+3
+D/home/vik/Documents/_data/_docs
+	_me
+1
+D/home/vik/Documents/_data
+	_docs
+5
+D/home/vik/Documents
+	_data
+1
+D/home/vik/Documents/_data
+	_docs
+5
+D/home/vik/Documents/_data/_docs
+	_me
+1
+D/home/vik/Documents/_data
+	_cloud
+4
+D/home/vik/Documents/_data/_cloud
+	dropbox
+1
+D/home/vik/Documents/_data/_cloud/dropbox
+	scripts
+8
+D/home/vik/Documents/_data/_cloud/dropbox/scripts
+	turn_off_screen.sh
+8
 D
 
 # Command line history (oldest to newest):
@@ -374,10 +549,8 @@ D
 :his
 :history
 :m
-:marks
 :screen
 :only
-:help
 :split
 :split1
 :h split
@@ -387,14 +560,21 @@ D
 :z0
 :filter file1
 :cd
-:sh
 :pwd
 :delete
+:marks
+:help
+:sh
+:cd ~
 :q
 
 # Search history (oldest to newest):
 /data
 /.config
+/fav
+/game
+/q
+/icon
 
 # Prompt history (oldest to newest):
 pSherlock.S03E01.720p.HeyDL.mkv
@@ -402,6 +582,7 @@ p50_coaching_drills_complete_soccer_coaching_guide_50_soccer
 plist_xx
 pLYNDA_LINUX_PACKAGE_MANAGERS_AND_REPOSITORIES_TUTORIAL-kEISO.bitdownload.ir
 pLYNDA_LINUX_PACKAGE_MANAGERS_AND_REPOSITORIES_TUTORIAL-kEISO.bitdownload.ir.rar
+pdomain_renewal_2019_04_20.pdf
 
 # Local filter history (oldest to newest):
 
@@ -428,7 +609,7 @@ t/home/vik/.local/share/vifm/Trash/000_solarized-dark.vifm
 # State:
 f
 i1
-[.0
+[.1
 [F
 F
 I1

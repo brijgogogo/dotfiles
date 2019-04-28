@@ -12,21 +12,23 @@ bindkey -v
 
 #zstyle :compinstall filename '/home/vik/.zshrc'
 
+# plugins
+plugins=(
+    git
+    z
+)
 
-# command completion
-autoload -Uz compinit
+# autocompletion, prompt, calculator
+autoload -Uz compinit promptinit zcalc
 compinit
-
-# load prompt theme system
-autoload -Uz promptinit
-compinit
+promptinit
 
 # left prompt
 #PROMPT='%F{red}%n%f@%F{blue}%m%f %F{yellow}%1~%f %# '
 
 # right prompt
 #RPROMPT='[%F{yellow}%?%f]'
-#prompt walters
+prompt bart
 
 # history search
 autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
@@ -34,3 +36,4 @@ zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 [[ -n "$key[Up]"   ]] && bindkey -- "$key[Up]"   up-line-or-beginning-search
 [[ -n "$key[Down]" ]] && bindkey -- "$key[Down]" down-line-or-beginning-search
+

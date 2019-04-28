@@ -21,3 +21,8 @@ ln -s ${BASEDIR}/.zshrc ~/.zshrc
 # mouse buttons
 ln -s ${BASEDIR}/.xbindkeysrc ~/.xbindkeysrc
 
+ln -s ${BASEDIR}/.config/dunst ~/.config/dunst
+ln -s ${BASEDIR}/.config/rofi ~/.config/rofi
+ln -s ${BASEDIR}/.config/i3 ~/.config/i3
+ln -s ${BASEDIR}/.config/vifm ~/.config/vifm
+
