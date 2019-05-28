@@ -56,6 +56,9 @@ Plug 'Quramy/tsuquyomi'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+
+Plug 'ctrlpvim/ctrlp.vim'
+
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""
@@ -372,6 +375,31 @@ set statusline+=\ %{FugitiveStatusline()}
 
 " install gvim for clipboard feature
 set clipboard=unnamedplus     "map vim :yank or :paste to system copy or paste
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" ctrl-p
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <leader>p :CtrlP<cr>
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+" where to search
+let g:ctrlp_working_path_mode = 'ra'
+" r - nearest ancestor containing root markers
+let g:ctrlp_root_markers = ['package.json', '*.sln']
+" ignore files
+if has('win32')
+  set wildignore+=*\\.git\\*,*\\tmp\\*,*\\node_modules\\*,*.swp,*.zip,*.exe  " Windows
+endif
+if has('unix')
+  set wildignore+=*/.git/*,*/tmp/*,*/node_modules/*,*.so,*.swp,*.zip     " Linux/MacOSX
+endif
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
+" open already open file in new pane
+let g:ctrlp_switch_buffer = 'et'
 
 " Omnisharp
 let g:OmniSharp_server_type = 'roslyn'
