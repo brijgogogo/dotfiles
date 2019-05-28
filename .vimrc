@@ -50,7 +50,7 @@ Plug 'OmniSharp/Omnisharp-vim'
 "Plug 'tpope/vim-dispatch'
 Plug 'Valloric/YouCompleteMe'
 Plug 'mattn/emmet-vim'
-
+Plug 'Quramy/vim-js-pretty-template'
 Plug 'jiangmiao/auto-pairs'
 Plug 'Quramy/tsuquyomi'
 
@@ -375,6 +375,16 @@ set statusline+=\ %{FugitiveStatusline()}
 
 " install gvim for clipboard feature
 set clipboard=unnamedplus     "map vim :yank or :paste to system copy or paste
+
+" vim-js-pretty-template
+" Register tag name associated the filetype
+" call jspretmpl#register_tag('gql', 'graphql')
+autocmd FileType javascript JsPreTmpl
+autocmd FileType javascript.jsx JsPreTmpl
+autocmd FileType typescript JsPreTmpl
+autocmd FileType typescript syn clear foldBraces " For leafgarland/typescript-vim users only
+autocmd FileType dart JsPreTmpl
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ctrl-p
