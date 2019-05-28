@@ -368,7 +368,7 @@ set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
 set statusline+=\[%{&fileformat}\]
 set statusline+=\ %p%%
 set statusline+=\ %l:%c
-
+set statusline+=\ %{FugitiveStatusline()}
 
 " install gvim for clipboard feature
 set clipboard=unnamedplus     "map vim :yank or :paste to system copy or paste
