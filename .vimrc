@@ -50,12 +50,15 @@ Plug 'OmniSharp/Omnisharp-vim'
 "Plug 'tpope/vim-dispatch'
 Plug 'Valloric/YouCompleteMe'
 Plug 'mattn/emmet-vim'
-
+Plug 'Quramy/vim-js-pretty-template'
 Plug 'jiangmiao/auto-pairs'
 Plug 'Quramy/tsuquyomi'
 
 "Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+
+Plug 'ctrlpvim/ctrlp.vim'
+
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""
@@ -368,10 +371,45 @@ set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
 set statusline+=\[%{&fileformat}\]
 set statusline+=\ %p%%
 set statusline+=\ %l:%c
-
+set statusline+=\ %{FugitiveStatusline()}
 
 " install gvim for clipboard feature
 set clipboard=unnamedplus     "map vim :yank or :paste to system copy or paste
+
+" vim-js-pretty-template
+" Register tag name associated the filetype
+" call jspretmpl#register_tag('gql', 'graphql')
+autocmd FileType javascript JsPreTmpl
+autocmd FileType javascript.jsx JsPreTmpl
+autocmd FileType typescript JsPreTmpl
+autocmd FileType typescript syn clear foldBraces " For leafgarland/typescript-vim users only
+autocmd FileType dart JsPreTmpl
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" ctrl-p
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <leader>p :CtrlP<cr>
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+" where to search
+let g:ctrlp_working_path_mode = 'ra'
+" r - nearest ancestor containing root markers
+let g:ctrlp_root_markers = ['package.json', '*.sln']
+" ignore files
+if has('win32')
+  set wildignore+=*\\.git\\*,*\\tmp\\*,*\\node_modules\\*,*.swp,*.zip,*.exe  " Windows
+endif
+if has('unix')
+  set wildignore+=*/.git/*,*/tmp/*,*/node_modules/*,*.so,*.swp,*.zip     " Linux/MacOSX
+endif
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
+" open already open file in new pane
+let g:ctrlp_switch_buffer = 'et'
 
 " Omnisharp
 let g:OmniSharp_server_type = 'roslyn'
