@@ -24,5 +24,7 @@ ln -s ${BASEDIR}/.xbindkeysrc ~/.xbindkeysrc
 ln -s ${BASEDIR}/.config/dunst ~/.config/dunst
 ln -s ${BASEDIR}/.config/rofi ~/.config/rofi
 ln -s ${BASEDIR}/.config/i3 ~/.config/i3
+ln -s ${BASEDIR}/.config/i3blocks ~/.config/i3blocks
 ln -s ${BASEDIR}/.config/vifm ~/.config/vifm
+ln -s ${BASEDIR}/.config/pet ~/.config/pet
 

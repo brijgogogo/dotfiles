@@ -36,7 +36,9 @@ PATH="$HOME/.node_modules/bin:$PATH"
 export npm_config_prefix=~/.node_modules
 
 # set my scripts path
-PATH="$HOME/Documents/_data/_cloud/dropbox/scripts:$PATH"
+PATH="$HOME/Documents/_data/_cloud/dropbox/scripts:$HOME/Documents/dotfiles/scripts:$PATH"
 
+# add ruby gems path
+PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"
 
 XDG_DATA_DIRS=/usr/local/share:/usr/share

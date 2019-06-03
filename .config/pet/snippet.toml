@@ -1,0 +1,14 @@
+[[snippets]]
+  description = "find empty directories"
+  command = "find . -type d -empty"
+  output = ""
+
+[[snippets]]
+  description = "delete empty directories"
+  command = "find . -type d -empty -delete"
+  output = ""
+
+[[snippets]]
+  description = "find extensions with count"
+  command = "find ./ -type f | grep -E \".*\\.[a-zA-Z0-9]*$\" | sed -e 's/.*\\(\\.[a-zA-Z0-9]*\\)$/\\1/' | sort | uniq -c | sort -n"
+  output = ""

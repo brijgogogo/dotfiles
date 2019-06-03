@@ -3,7 +3,7 @@
 [[ -f ~/.Xresources ]] && xrdb -merge -I%HOME ~/.Xresources
 
 # start urxvt daemon
-/usr/bin/urxvtd -q -o -f &
+urxvtd -q -o -f
 
 # start i3
 exec i3

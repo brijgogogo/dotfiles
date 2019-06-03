@@ -73,12 +73,12 @@ bindsym $mod+minus scratchpad show
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1:"
+set $ws1 "1:"
 set $ws2 "2:"
 set $ws3 "3:"
 set $ws4 "4:"
 set $ws5 "5:"
-set $ws6 "6:"
+set $ws6 "6:"
 set $ws7 "7:"
 set $ws8 "8:"
 set $ws9 "9:"
@@ -168,6 +168,9 @@ for_window [class=$TERMINAL_CLASS instance="^alsamixer$"] floating enable
 bindsym $mod+Return exec $TERMINAL
 bindsym $mod+Shift+Return exec $TERMINAL -cd "`xcwd`"
 
+SET $DOT_FILES /home/vik/Documents/dotfiles
+SET $DOT_FILES_SCRIPTS /home/vik/Documents/dotfiles/scripts
+set $SCRIPTS_DIR $DOT_FILES/.config/i3blocks/scripts/i3blocks-contrib
 # Set shut down, restart and locking features
 bindsym $mod+x mode "$mode_system"
 set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (p)oweroff
@@ -233,7 +236,23 @@ bar {
   position bottom
   #status_command i3status -c ~/.config/i3/i3status.conf
   status_command i3blocks
+  status_command 2>/tmp/i3blocks.err i3blocks -vvv -c ~/.config/i3blocks/config | tee /tmp/i3blocks.out
 }
+
+#bar {
+#  colors {
+#    background #$bgcolor
+#    statusline #$txtcolor
+#    separator #$faded_txt_color
+#    focused_workspace #$fgcolor #$bgcolor #$txtcolor
+#    inactive_workspace #$bgcolor #$bgcolor #$txtcolor
+#    urgent_workspace #$urgent #$urgent #$txtcolor
+#  }
+#  workspace_buttons no
+#  font pango:DejaVu Sans Mono, FontAwesome 8
+#  position top
+#  status_command i3blocks -c ~/.config/i3blocks/config2
+#}
 
 mode  "Passthrough Mode - Press mod+F12 to exit" {
         bindsym $mod+F12 mode "default"
@@ -244,6 +263,10 @@ bindsym $mod+F12 mode "Passthrough Mode - Press mod+F12 to exit"
 bindsym Print exec scrot ~/Documents/screenshot_%Y_%m_%d_%H_%M_%S.png
 bindsym --release $mod+Print exec scrot -s ~/Documents/screenshot_%Y_%m_%d_%H_%M_%S.png
 bindsym --release $mod+Shift+Print exec scrot -u -d 4 ~/Documents/screenshot_%Y_%m_%d_%H_%M_%S.png
+
+bindsym --release Caps_Lock exec pkill -SIGRTMIN+10 i3blocks
+bindsym --release Num_Lock exec pkill -SIGRTMIN+10 i3blocks
+bindsym --release Scroll_Lock exec pkill -SIGRTMIN+10 i3blocks
 
 # lock screen
 # bindsym $mod+Control+l exec i3lock -c 0000AA
@@ -275,12 +298,21 @@ client.background          #$bgcolor
 assign [class="(?i)vmware-view"] $ws9
 assign [class="calibre"] $ws10
 
+for_window [class="Yad"] floating enable
+
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec "amixer -c 1 -- sset Master 1dB+"
+#bindsym XF86AudioRaiseVolume exec "amixer -c 1 -- sset Master 1dB+"
 #volume
-bindsym XF86AudioLowerVolume exec "amixer -c 1 -- sset Master 1dB-"
+#bindsym XF86AudioLowerVolume exec "amixer -c 1 -- sset Master 1dB-"
 #volume
-bindsym XF86AudioMute exec "amixer sset Master toggle"
+#bindsym XF86AudioMute exec "amixer sset Master toggle"
+#bindsym --release XF86AudioRaiseVolume exec pkill -SIGRTMIN+10 i3blocks
+#bindsym --release XF86AudioLowerVolume exec pkill -SIGRTMIN+10 i3blocks
+
+# change volume or toggle mute
+bindsym XF86AudioRaiseVolume exec amixer -q -D pulse sset Master 5%+ && pkill -RTMIN+10 i3blocks
+bindsym XF86AudioLowerVolume exec amixer -q -D pulse sset Master 5%- && pkill -RTMIN+10 i3blocks
+bindsym XF86AudioMute exec amixer -q -D pulse sset Master toggle && pkill -RTMIN+10 i3blocks
 
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play-pause
@@ -291,5 +323,11 @@ bindsym XF86AudioPrev exec playerctl previous
 # Sreen brightness controls, using acpilight
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+
+# bindsym $mod+t exec --no-startup-id i3-msg exec /home/vik/Documents/dotfiles/scripts/cht_dir/rofi_scripts/cht1.sh
+
+# bindsym $mod+t exec --no-startup-id i3-msg exec /home/vik/Documents/dotfiles/scripts/urxvt_test.sh
+
+
 
 # end

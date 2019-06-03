@@ -1,0 +1,31 @@
+#!/bin/bash
+
+if [[ -z "$INTERFACE" ]] ; then
+    INTERFACE="${BLOCK_INSTANCE:-wlan0}"
+fi
+
+[[ ! -d /sys/class/net/${INTERFACE}/wireless ]] && exit
+
+if [[ "$(cat /sys/class/net/$INTERFACE/operstate)" = 'down' ]]; then
+    echo "down"
+    echo "down"
+    echo "#FF0000"
+    exit
+fi
+
+INFO=$(sudo iw dev $INTERFACE link)
+SSID=$(echo $INFO | grep SSID | awk '{ print $7 }')
+QUALITY=$(echo $INFO | awk '{print int($11 + 100)}')
+echo $LABEL $SSID $QUALITY% # full text
+echo $LABEL $SSID $QUALITY% # short text
+
+# color
+if [[ $QUALITY -ge 70 ]]; then
+    echo "#52D83A"
+elif [[ $QUALITY -ge 60 ]]; then
+    echo "#FCE14B"
+elif [[ $QUALITY -ge 35 ]]; then
+    echo "#FFAE00"
+else
+    echo "#d73a49"
+fi
