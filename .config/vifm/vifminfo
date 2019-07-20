@@ -25,7 +25,7 @@
 # Bookmarks:
 
 # TUI:
-al
+ar
 q0
 v2
 ov
@@ -34,33 +34,201 @@ l2
 r16,2
 
 # Left window history (oldest to newest):
-d/home/vik/Documents/_data/_photos/temp
-	DSC_0066.jpg
-4
-d/home/vik/Documents/_data/_photos
-	temp
-3
-d/home/vik/Documents/_data
-	_temp
-8
+d/home/vik/Documents/_data/_temp/CreativeMarket - Resume Set Template
+	Files
+1
 d/home/vik/Documents/_data/_temp
-	t
-11
-d/home/vik/Documents/_data/_temp/t
-	t
-4
-d/home/vik/Documents/_data/_temp/t/t
+	09.Phrasebooks, Conversational Manuals and Dictionaries
+10
+d/home/vik/Documents/_data
+	_tutorials
+9
+d/home/vik/Documents/_data/_tutorials
+	dotnet
+25
+d/home/vik/Documents/_data/_tutorials/dotnet
+	Udemy - Getting Started.NET Core Microservices RabbitMQ
+1
+d/home/vik/Documents/_data/_tutorials/dotnet/Udemy - Getting Started.NET Core Microservices RabbitMQ
+	3. Producers and Consumers
+3
+d/home/vik/Documents/_data/_tutorials/dotnet/Udemy - Getting Started.NET Core Microservices RabbitMQ/3. Producers and Consumers
 	..
 0
-d/home/vik/Documents/_data/_temp/t
-	t
-4
-d/home/vik/Documents/_data/_temp
-	t
-11
+d/home/vik/Documents/_data/_tutorials/dotnet/Udemy - Getting Started.NET Core Microservices RabbitMQ
+	3. Producers and Consumers
+3
+d/home/vik/Documents/_data/_tutorials/dotnet
+	Udemy - Getting Started.NET Core Microservices RabbitMQ
+1
+d/home/vik/Documents/_data/_tutorials
+	dotnet
+25
 d/home/vik/Documents/_data
-	_temp
-8
+	_tutorials
+9
+d/home/vik/Documents
+	_data
+1
+d/home/vik
+	Downloads
+4
+d/home/vik/Downloads
+	Top.Guns.[720p].mkv
+33
+d/home/vik
+	_my_temp
+7
+d/home/vik/_my_temp
+	file1
+1
+d/home/vik
+	Desktop
+2
+d/home/vik/Desktop
+	..
+0
+d/home/vik
+	Desktop
+2
+d/home
+	vik
+2
+d/home/vik
+	Documents
+3
+d/home/vik/Documents
+	_data
+1
+d/home/vik/Documents/_data
+	movies
+20
+d/home/vik/Documents/_data/movies
+	..
+0
+d/home/vik/Documents/_data
+	movies
+20
+d/home/vik/Documents/_data/movies
+	..
+0
+d/home/vik/Documents/_data
+	_waste
+11
+d/home/vik/Documents/_data/_waste
+	..
+0
+d/home/vik/Documents/_data
+	_waste
+11
+d/home/vik/Documents/_data/_waste
+	..
+0
+d/home/vik/Documents/_data
+	_waste
+11
+d/home/vik/Documents/_data/_waste
+	..
+0
+d/home/vik/Documents/_data
+	_backgrounds
+1
+d/home/vik/Documents/_data/_backgrounds
+	slider.jpg
+3
+d/home/vik/Documents/_data
+	_books
+2
+d/home/vik/Documents/_data/_books
+	..
+0
+d/home/vik/Documents/_data
+	_cloud
+3
+d/home/vik/Documents/_data/_cloud
+	..
+0
+d/home/vik/Documents/_data
+	_docs
+4
+d/home/vik/Documents/_data/_docs
+	..
+0
+d/home/vik/Documents/_data
+	_experiments
+5
+d/home/vik/Documents
+	jpg
+7
+d/home/vik/Documents/jpg
+	CSC_0114.JPG
+1
+d/home/vik/Documents
+	_data
+1
+d/home/vik
+	Documents
+3
+d/home/vik/Documents
+	_data
+1
+d/home/vik/Documents/_data
+	movies
+19
+d/home/vik/Documents/_data/movies
+	..
+0
+d/home/vik/Documents/_data
+	_experiments
+5
+d/home/vik/Documents/_data/_experiments
+	..
+0
+d/home/vik/Documents/_data
+	_music
+6
+d/home/vik/Documents/_data/_music
+	Bom Diggy Diggy.mp3
+1
+d/home/vik/Documents/_data
+	_music
+6
+d/home/vik/Documents/_data/_music
+	Tera Ghata.mp3
+5
+d/home/vik/Documents/_data
+	_work
+11
+d/home/vik/Documents/_data/_work
+	ingraham
+1
+d/home/vik/Documents/_data/_work/ingraham
+	bills
+1
+d/home/vik/Documents/_data/_work
+	ingraham
+1
+d/home/vik/Documents/_data
+	movies
+19
+d/home/vik/Documents/_data/movies
+	..
+0
+d/home/vik/Documents/_data
+	list9
+17
+d/home/vik/Documents
+	repos
+10
+d/home/vik/Documents/repos
+	..
+0
+d/home/vik/Documents
+	wiki
+12
+d/home/vik/Documents/wiki
+	..
+0
 d/home/vik/Documents
 	_data
 1
@@ -68,455 +236,107 @@ d/home/vik/Documents/_data
 	_tutorials
 9
 d/home/vik/Documents/_data/_tutorials
-	C# Acceleration with Visual Studio 2017 Community
-3
-d/home/vik/Documents/_data/_tutorials/C# Acceleration with Visual Studio 2017 Community
-	Read Me.txt
-1
-d/home/vik/Documents/_data/_tutorials
-	Frontend Masters - Angular Core
-8
-d/home/vik/Documents/_data/_tutorials/Frontend Masters - Angular Core
-	..
-0
-d/home/vik/Documents/_data/_tutorials
-	Frontend Masters - Debugging and Fixing Common JavaScript Errors
-12
-d/home/vik/Documents/_data/_tutorials/Frontend Masters - Debugging and Fixing Common JavaScript Errors
-	3. First Bug
-3
-d/home/vik/Documents/_data/_tutorials
-	Frontend Masters - Functional-Light JavaScript, v2
-14
-d/home/vik/Documents/_data/_tutorials/Frontend Masters - Functional-Light JavaScript, v2
-	..
-0
-d/home/vik/Documents/_data/_tutorials
 	Lynda - Learning Slack
 32
 d/home/vik/Documents/_data/_tutorials/Lynda - Learning Slack
-	..
-0
-d/home/vik/Documents/_data/_tutorials
-	Lynda.Learning.Docker-XQZT
-33
-d/home/vik/Documents/_data/_tutorials/Lynda.Learning.Docker-XQZT
-	2.1. Installing Docker
-2
-d/home/vik/Documents/_data/_tutorials/Lynda.Learning.Docker-XQZT/2.1. Installing Docker
-	..
-0
-d/home/vik/Documents/_data/_tutorials/Lynda.Learning.Docker-XQZT
-	2.1. Installing Docker
-2
-d/home/vik/Documents/_data/_tutorials
-	Pluralsight - Become a Full-stack .NET Developer - Architecture and Testing
-33
-d/home/vik/Documents/_data/_tutorials/Pluralsight - Become a Full-stack .NET Developer - Architecture and Testing
-	00.Implementing-the-Remaining-Use-Cases
+	1.Introduction
 1
-d/home/vik/Documents/_data/_tutorials/Pluralsight - Become a Full-stack .NET Developer - Architecture and Testing/00.Implementing-the-Remaining-Use-Cases
-	..
-0
-d/home/vik/Documents/_data/_tutorials/Pluralsight - Become a Full-stack .NET Developer - Architecture and Testing
-	01.Modularizing-JavaScript-Code
+d/home/vik/Documents/_data/_tutorials/Lynda - Learning Slack/1.Introduction
+	01.Welcome.en.srt
+1
+d/home/vik/Documents/_data/_tutorials/Lynda - Learning Slack
+	1.Introduction
+1
+d/home/vik/Documents/_data/_tutorials
+	Lynda - Learning Slack
+32
+d/home/vik/Documents/_data
+	_tutorials
+9
+d/home/vik/Documents
+	_data
+1
+d/home/vik
+	DataCard
+1
+d/home/vik/DataCard
+	temp
+15
+d/home/vik/DataCard/temp
+	waste
+1
+d/home/vik/DataCard/temp/waste
+	Tushy - Anny Aurora - Perfect Send Off
+13
+d/home/vik/DataCard/temp/waste/Tushy - Anny Aurora - Perfect Send Off
+	Tushy - Anny Aurora - Perfect Send Off.mp4
 2
-d/home/vik/Documents/_data/_tutorials
-	Skillshare - Git for Creatives
-23
-d/home/vik/Documents/_data/_tutorials/Skillshare - Git for Creatives
-	7-08 Pull requests.mp4
-8
-d/home/vik/Documents/_data/_tutorials
-	egghead.io (2018)
-32
-d/home/vik/Documents/_data/_tutorials/egghead.io (2018)
+d/home/vik/DataCard/temp/waste
+	Tushy - Marley Brinx - Conflicted
+15
+d/home/vik/DataCard/temp/waste/Tushy - Marley Brinx - Conflicted
+	Tushy - Marley Brinx - Conflicted.mp4
+3
+d/home/vik/DataCard/temp/waste
+	Tushy - Riley Steele - The Perfect Wife
+17
+d/home/vik/DataCard/temp/waste/Tushy - Riley Steele - The Perfect Wife
+	Tushy - Riley Steele - The Perfect Wife.mp4
+3
+d/home/vik/DataCard/temp/waste
+	Tushy - Riley Steele - The Perfect Wife
+17
+d/home/vik/DataCard
 	..
 0
-d/home/vik/Documents/_data/_tutorials
-	egghead.io (2018)
-32
-d/home/vik/Documents/_data/_tutorials/egghead.io (2018)
-	..
-0
-d/home/vik/Documents/_data/_tutorials
-	egghead.io (2018)
-32
-d/home/vik/Documents/_data/_tutorials/egghead.io (2018)
-	..
-0
-d/home/vik/Documents/_data/_tutorials
-	egghead.io (2018)
-32
-d/home/vik/Documents/_data/_tutorials/egghead.io (2018)
-	..
-0
-d/home/vik/Documents/_data/_tutorials
-	[DesireCourse.Com] Udemy - Linux Administration Bootcamp Go from Beginner to Advanced
-21
+d/home/vik
+	Documents
+3
+d/home/vik/Documents
+	_data
+1
 d/home/vik/Documents/_data
 	_temp
 8
 d/home/vik/Documents/_data/_temp
 	t
-11
+14
 d/home/vik/Documents/_data/_temp/t
-	t
+	..
+0
+d/home/vik/Documents/_data/_temp
+	Resume
+13
+d/home/vik/Documents/_data/_temp/Resume
+	..
+0
+d/home/vik/Documents/_data/_temp
+	PSD
+12
+d/home/vik/Documents/_data/_temp/PSD
+	..
+0
+d/home/vik/Documents/_data/_temp
+	PSD
+12
+d/home/vik/Documents/_data
+	_docs
 4
-d/home/vik/Documents/_data/_temp/t/t
-	Algebra II Essentials For Dummies.epub
+d/home/vik/Documents/_data/_docs
+	_me
+1
+d/home/vik/Documents/_data/_docs/_me
+	tax
+14
+d/home/vik/Documents/_data/_docs/_me/tax
+	ITR_2019
 6
-d/home/vik/Documents/_data/_temp/t
-	t
-4
-d/home/vik/Documents/_data/_temp/t/t
-	z
-1
-d/home/vik/Documents/_data/_temp/t/t/z
-	beyonsoftwarchz.rar
-29
-d/home/vik/Documents/_data/_temp/t/t
-	z
-1
-d/home/vik/Documents/_data/_temp/t/t/z
-	Design It! From Programmer to Software Architect (The Pragmatic Programmers)
-1
-d/home/vik/Documents/_data/_temp/t/t/z/Design It! From Programmer to Software Architect (The Pragmatic Programmers)
-	..
-0
-d/home/vik/Documents/_data/_temp/t/t/z
-	Apress.Oracle.High.Availability.Disaster.Recovery.and.Cloud.Services.1484243501.pdf
-2
-d/home/vik/Documents/_data/_temp/t/t
-	z
-1
-d/home/vik/Documents/_data/_temp/t/t/z
-	2008 Luke Hohmann-Beyond Software Architecture.epub
-1
-d/home/vik/Documents/_data/_temp/t/t
-	..
-0
-d/home/vik/Documents/_data/_temp/t
-	..
-0
-d/home/vik/Documents/_data/_temp
-	t
-11
-d/home/vik/Documents/_data/_temp/t
-	t
-4
-d/home/vik/Documents/_data/_temp/t/t
-	z
-1
-d/home/vik/Documents/_data/_temp/t/t/z
-	Design It! From Programmer to Software Architect (The Pragmatic Programmers)
-1
-d/home/vik/Documents/_data/_temp/t/t/z/Design It! From Programmer to Software Architect (The Pragmatic Programmers)
-	Design It! From Programmer to Software Architect (The Pragmatic Programmers).epub
+d/home/vik/Documents/_data/_docs/_me/tax/ITR_2019
+	EAQPS2523J-2019.pdf
 3
-d/home/vik/Documents/_data/_temp/t/t/z
-	Design It! From Programmer to Software Architect (The Pragmatic Programmers)
-1
-d/home/vik/Documents/_data/_temp/t/t
-	z
-1
-d/home/vik/Documents/_data/_temp/t/t/z
-	How to Make Incredible Money in Technology Sales
-2
-d/home/vik/Documents/_data/_temp/t/t/z/How to Make Incredible Money in Technology Sales
-	How to Make Incredible Money in Technology Sales.epub
-3
-d/home/vik/Documents/_data/_temp/t/t/z
-	How to Make Incredible Money in Technology Sales
-2
-d/home/vik/Documents/_data/_temp/t/t
-	z
-1
-d/home/vik/Documents/_data/_temp/t/t/z
-	Practical Modern JavaScript Dive into ES6 and the Future of JavaScript
-3
-d/home/vik/Documents/_data/_temp/t/t/z/Practical Modern JavaScript Dive into ES6 and the Future of JavaScript
-	Practical Modern JavaScript Dive into ES6 and the Future of JavaScript.epub
-3
-d/home/vik/Documents/_data/_temp/t/t/z
-	Practical Modern JavaScript Dive into ES6 and the Future of JavaScript
-3
-d/home/vik/Documents/_data/_temp/t/t
-	z
-1
-d/home/vik/Documents/_data/_temp/t/t/z
-	The Big Book of Healing Drinks Juices, Smoothies, Teas, Tonics, and Elixirs to Cleanse and Detoxify
-4
-d/home/vik/Documents/_data/_temp/t/t/z/The Big Book of Healing Drinks Juices, Smoothies, Teas, Tonics, and Elixirs to Cleanse and Detoxify
-	The Big Book of Healing Drinks Juices, Smoothies, Teas, Tonics, and Elixirs to Cleanse and Detoxify.epub
-3
-d/home/vik/Documents/_data/_temp/t/t/z
-	The Big Book of Healing Drinks Juices, Smoothies, Teas, Tonics, and Elixirs to Cleanse and Detoxify
-4
-d/home/vik/Documents/_data/_temp/t/t
-	z
-1
-d/home/vik/Documents/_data/_temp/t/t/z
-	Top 10 Madrid (DK Eyewitness Travel Guide), Revised Edition
-5
-d/home/vik/Documents/_data/_temp/t/t/z/Top 10 Madrid (DK Eyewitness Travel Guide), Revised Edition
-	Top 10 Madrid (DK Eyewitness Travel Guide), Revised Edition.epub
-3
-d/home/vik/Documents/_data/_temp/t/t/z
-	Top 10 Madrid (DK Eyewitness Travel Guide), Revised Edition
-5
-d/home/vik/Documents/_data/_temp/t/t
-	z
-1
-d/home/vik/Documents/_data/_temp/t/t/z
-	..
-0
-d/home/vik/Documents/_data/_temp/t/t
-	z
-1
-d/home/vik/Documents/_data/_temp/t
-	t
-4
-d/home/vik/Documents/_data/_temp
-	t
-11
-d/home/vik/Documents/_data
-	_temp
-8
-d/home/vik/Documents
-	dot_net_helpers
-3
-d/home/vik
-	Documents
-3
-d/home/vik/Documents
-	myblog
-7
-d/home/vik/Documents/myblog
-	Gemfile.lock
-5
-d/home/vik/Documents
-	myblog
-7
-d/home/vik/Documents/myblog
-	_posts
-1
-d/home/vik/Documents/myblog/_posts
-	2019-05-26-welcome-to-jekyll.markdown
-1
-d/home/vik/Documents/myblog
-	_site
-2
-d/home/vik/Documents/myblog/_site
-	about
-1
-d/home/vik/Documents/myblog
-	404.html
-3
-d/home/vik/Documents
-	myblog
-8
-d/home/vik
-	Documents
-3
-d/home
-	vik
-2
-d/home/vik
-	Documents
-3
-d/home
-	vik
-2
-d/home/vik
-	Downloads
-4
-d/home/vik/Downloads
-	Apress.Clean.Python.Elegant.Coding.in.Python.1484248775.rar
-26
 d
 
 # Right window history (oldest to newest):
-D/home/vik/Documents/_data/_tutorials/Lynda.Linux.Security.and.Hardening.Essential.Training-XQZT
-	2.1. General Security
-2
-D/home/vik/Documents/_data/_tutorials/Lynda.Linux.Security.and.Hardening.Essential.Training-XQZT/2.1. General Security
-	04.What makes Linux secure.mp4
-3
-D/home/vik/Documents/_data/_tutorials/Lynda.Linux.Security.and.Hardening.Essential.Training-XQZT
-	2.1. General Security
-2
-D/home/vik/Documents/_data/_tutorials
-	Lynda.Linux.Security.and.Hardening.Essential.Training-XQZT
-4
-D/home/vik/Documents/_data
-	_tutorials
-11
-D/home/vik/Documents
-	_data
-1
-D/home/vik
-	Documents
-32
-D/home/vik/Documents
-	wiki
-10
-D/home/vik/Documents/wiki
-	[temp
-2
-D/home/vik/Documents/wiki/[temp
-	..
-0
-D/home/vik/Documents/wiki
-	productivity.md
-27
-D/home/vik/Documents
-	wiki
-10
-D/home/vik/Documents/wiki
-	_site
-3
-D/home/vik/Documents/wiki/_site
-	assets
-2
-D/home/vik/Documents/wiki/_site/assets
-	..
-0
-D/home/vik/Documents/wiki/_site
-	ireland
-7
-D/home/vik/Documents/wiki/_site/ireland
-	index.md
-5
-D/home/vik/Documents/wiki/_site
-	ireland
-7
-D/home/vik/Documents/wiki
-	_site
-3
-D/home/vik/Documents/wiki/_site
-	ireland
-7
-D/home/vik/Documents/wiki
-	_site
-3
-D/home/vik/Documents/wiki/_site
-	index.md
-20
-D/home/vik/Documents/wiki
-	vocabulary.md
-28
-D/home/vik/Documents
-	wiki
-11
-D/home/vik
-	Downloads
-33
-D/home/vik/Downloads
-	EroticaX - Adriana Chechik - Check Please
-11
-D/home/vik/Downloads/EroticaX - Adriana Chechik - Check Please
-	EroticaX - Adriana Chechik - Check Please.mp4
-1
-D/home/vik/Downloads
-	EroticaX - Jessa Rhodes - Make Me Sweat (NEW March 10, 2017)
-17
-D/home/vik/Downloads/EroticaX - Jessa Rhodes - Make Me Sweat (NEW March 10, 2017)
-	EroticaX - Jessa Rhodes - Make Me Sweat (NEW March 10, 2017).mp4
-1
-D/home/vik/Downloads
-	Passion-HD - Adriana Chechik, Lana Rhoades - Orgy Party - Our 1000th Scene
-33
-D/home/vik/Downloads/Passion-HD - Adriana Chechik, Lana Rhoades - Orgy Party - Our 1000th Scene
-	Passion-HD - Adriana Chechik, Lana Rhoades - Orgy Party - Our 1000th Scene.mp4
-1
-D/home/vik/Downloads
-	Passion-HD - Uma Jolie - Umas Sensual Massage
-33
-D/home/vik/Downloads/Passion-HD - Uma Jolie - Umas Sensual Massage
-	Passion-HD - Uma Jolie - Umas Sensual Massage.mp4
-1
-D/home/vik/Downloads
-	SweetSinner.19.02.26.Jessa.Rhodes.Indulgence..480p.MP4-XXX
-33
-D/home/vik/Downloads/SweetSinner.19.02.26.Jessa.Rhodes.Indulgence..480p.MP4-XXX
-	sweetsinner.19.02.26.jessa.rhodes.indulgence.mp4
-1
-D/home/vik/Downloads
-	Tushy - Lana Rhoades, Jade Nile - Sharing Her Ass With My Husband
-33
-D/home/vik/Downloads/Tushy - Lana Rhoades, Jade Nile - Sharing Her Ass With My Husband
-	Tushy - Lana Rhoades, Jade Nile - Sharing Her Ass With My Husband.mp4
-1
-D/home/vik/Downloads
-	Tushy - Marley Brinx - Conflicted
-33
-D/home/vik/Downloads/Tushy - Marley Brinx - Conflicted
-	Tushy - Marley Brinx - Conflicted.mp4
-3
-D/home/vik/Downloads
-	Tushy - Nicole Aniston - Anal On The First Date
-33
-D/home/vik/Downloads/Tushy - Nicole Aniston - Anal On The First Date
-	Tushy - Nicole Aniston - Anal On The First Date.mp4
-1
-D/home/vik/Downloads
-	Tushy.19.02.10.Tori.Black..480p.MP4-XXX
-33
-D/home/vik/Downloads/Tushy.19.02.10.Tori.Black..480p.MP4-XXX
-	tushy.19.02.10.tori.black.mp4
-1
-D/home/vik/Downloads
-	Vixen - Sybil - Caught In The Moment
-33
-D/home/vik/Downloads/Vixen - Sybil - Caught In The Moment
-	Vixen - Sybil - Caught In The Moment.mp4
-3
-D/home/vik/Downloads
-	Vixen - Uma Jolie - I ll Do Anything To Be Famous
-33
-D/home/vik/Downloads/Vixen - Uma Jolie - I ll Do Anything To Be Famous
-	Vixen - Uma Jolie - I ll Do Anything To Be Famous.mp4
-1
-D/home/vik/Downloads
-	X-Art.16.07.15.Uma.Jolie.I.Like.Cherry.Pie.XXX.2160p.MP4-KTR
-33
-D/home/vik/Downloads/X-Art.16.07.15.Uma.Jolie.I.Like.Cherry.Pie.XXX.2160p.MP4-KTR
-	xart.16.07.15.uma.jolie.i.like.cherry.pie.4k.mp4
-1
-D/home/vik/Downloads
-	[EroticaX] Alina Lopez - LA Lover (06.06.2018) rq.mp4
-33
-D/home/vik
-	Downloads
-32
-D/home/vik/Downloads
-	Dont.Fuck.My.Sister.XXX.DVDRip.x264-Pr0nStarS
-10
-D/home/vik/Downloads/Dont.Fuck.My.Sister.XXX.DVDRip.x264-Pr0nStarS
-	ps-dontfuck.mp4
-1
-D/home/vik/Downloads
-	EroticaX - Adriana Chechik - Check Please
-11
-D/home/vik/Downloads/EroticaX - Adriana Chechik - Check Please
-	EroticaX - Adriana Chechik - Check Please.mp4
-1
-D/home/vik/Downloads
-	EroticaX - Aidra Fox - Good Morning Sex
-12
-D/home/vik/Downloads/EroticaX - Aidra Fox - Good Morning Sex
-	EroticaX - Aidra Fox - Good Morning Sex.mp4
-1
-D/home/vik/Downloads
-	EroticaX - Gia Derza, Aidra Fox - Midnight Threeway
-15
-D/home/vik/Downloads/EroticaX - Gia Derza, Aidra Fox - Midnight Threeway
-	EroticaX - Gia Derza, Aidra Fox - Midnight Threeway.mp4
-1
-D/home/vik/Downloads
-	EroticaX - Gianna Dior - Home Movies
-16
 D/home/vik/Downloads/EroticaX - Gianna Dior - Home Movies
 	EroticaX - Gianna Dior - Home Movies.mp4
 1
@@ -637,6 +457,186 @@ D/home/vik/Documents/dotfiles/.config/i3blocks/scripts/bandwidth2
 D/home/vik/Documents/dotfiles/.config/i3blocks/scripts
 	brightness
 5
+D/home/vik/Documents/dotfiles/.config/i3blocks
+	scripts
+1
+D/home/vik/Documents/dotfiles/.config
+	i3blocks
+3
+D/home/vik/Documents/dotfiles
+	.config
+1
+D/home/vik/Documents
+	dotfiles
+4
+D/home/vik
+	Downloads
+32
+D/home/vik/Downloads
+	Vixen - Apolonia Lapiedra, Sybil - I Was Seduced By A Couple
+4
+D/home/vik/Downloads/Vixen - Apolonia Lapiedra, Sybil - I Was Seduced By A Couple
+	Vixen - Apolonia Lapiedra, Sybil - I Was Seduced By A Couple.mp4
+3
+D/home/vik/Downloads
+	Vixen - Apolonia Lapiedra, Sybil - I Was Seduced By A Couple
+4
+D/home/vik
+	Documents
+31
+D/home/vik/Documents
+	programming
+9
+D/home/vik
+	DataCard
+29
+D/home/vik/DataCard
+	_movies
+7
+D/home/vik/DataCard/_movies
+	GOT
+33
+D/home/vik/DataCard/_movies/GOT
+	Game.of.Thrones.S08E02.1080p.WEB.x264-ADRENALiNE[ettv]
+2
+D/home/vik/DataCard/_movies
+	GOT
+33
+D/home/vik/DataCard
+	_videos
+12
+D/home/vik/DataCard/_videos
+	2012
+1
+D/home/vik/DataCard/_videos/2012
+	Vid
+1
+D/home/vik/DataCard/_videos/2012/Vid
+	..
+0
+D/home/vik/DataCard/_videos/2012
+	Vid
+1
+D/home/vik/DataCard/_videos
+	2012
+1
+D/home/vik/DataCard
+	temp
+16
+D/home/vik/DataCard/temp
+	waste
+1
+D/home/vik/DataCard/temp/waste
+	..
+0
+D/home/vik/DataCard/temp
+	zip
+2
+D/home/vik/DataCard
+	temp
+16
+D/home/vik/DataCard/temp
+	waste
+1
+D/home/vik/DataCard/temp/waste
+	XXX-Morning_Foursome.mp4
+31
+D/home/vik/DataCard/temp
+	waste
+1
+D/home/vik/DataCard/temp/waste
+	[2ChicksSameTime] Kimmy Granger, Leah Gotti (21455 - 23.07.16) rq (480p).mp4
+27
+D/home/vik/DataCard/temp
+	waste
+1
+D/home/vik/DataCard
+	_tutorials
+11
+D/home/vik/DataCard/_tutorials
+	video
+3
+D/home/vik/DataCard/_tutorials/video
+	php
+28
+D/home/vik/DataCard/_tutorials
+	video
+3
+D/home/vik/DataCard
+	_tutorials
+11
+D/home/vik
+	DataCard
+29
+D/home
+	vik
+2
+D/home/vik
+	Downloads
+32
+D/home/vik/Downloads
+	Passion-HD - Jessa Rhodes - Wet Beauty
+27
+D/home/vik/Downloads/Passion-HD - Jessa Rhodes - Wet Beauty
+	Passion-HD - Jessa Rhodes - Wet Beauty.mp4
+1
+D/home/vik/Downloads
+	1491979593.pdf
+6
+D/home/vik
+	Documents
+31
+D/home/vik/Documents
+	programming
+9
+D/home/vik/Documents/programming
+	aspnetcore_demos
+3
+D/home/vik/Documents
+	_data
+1
+D/home/vik/Documents/_data
+	_experiments
+7
+D/home/vik/Documents
+	_data
+1
+D/home/vik
+	Downloads
+32
+D/home/vik/Downloads
+	Under The Tree (2017) [BluRay] [720p] [YTS.AM]
+5
+D/home/vik/Downloads/Under The Tree (2017) [BluRay] [720p] [YTS.AM]
+	www.YTS.AM.jpg
+1
+D/home/vik/Downloads
+	Under The Tree (2017) [BluRay] [720p] [YTS.AM]
+5
+D/home/vik
+	DataCard
+29
+D/home/vik/DataCard
+	jpg
+3
+D/home/vik/DataCard/jpg
+	CSC_0115.JPG
+2
+D/home/vik/DataCard
+	InternationalImportantInfo.pdf
+5
+D/home/vik
+	DataCard
+29
+D/home
+	vik
+2
+D/home/vik
+	Documents
+31
+D/home/vik/Documents
+	_data
+1
 D
 
 # Command line history (oldest to newest):
@@ -698,7 +698,6 @@ D
 :filter .zip
 :filter .rar
 :filter zip
-:delete
 :mkdir t
 :filter =
 :mkdir 2019
@@ -707,15 +706,23 @@ D
 :view
 :mkdir z
 :filter rar
-:sh
 :filter .pdf
 :filter /^.*\.(pdf|epub|mobi)$/
 :invert
 :filter
 :touch Gemfile
-:w
 :e .com
 :edit .shell_common_rc
+:de
+:hhjj
+:w
+:rename form16.pdf
+:mkdir dotnet
+:mkdir GOT
+:mkdir waste
+:delete
+:mkdir ITR_2019
+:sh
 :q
 
 # Search history (oldest to newest):
@@ -737,7 +744,6 @@ D
 /neil
 /rosa
 /personal
-/christy
 /config
 /vifm
 /documents
@@ -757,8 +763,31 @@ D
 /css3
 /css
 /mern
-/react
 /clean
+/react
+/erotic
+/lana
+/micro
+/christy
+/2b
+/chick
+/passion
+/sweet
+/tushy
+/good
+/node.js
+/guns
+/under
+/top
+/wet
+/jess
+/riley/li
+/liya/an
+/anny
+/vixen
+/form
+/eaq
+/tree
 
 # Prompt history (oldest to newest):
 pSherlock.S03E01.720p.HeyDL.mkv
