@@ -7,7 +7,8 @@ BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 echo "installing dotfiles from ${BASEDIR}"
 
 # vim
-ln -s ${BASEDIR}/.vimrc ~/.vimrc
+mkdir ~/.vim
+ln -s ${BASEDIR}/.vim/vimrc ~/.vim/vimrc
 
 # bash
 ln -s ${BASEDIR}/.bashrc ~/.bashrc
@@ -23,8 +24,9 @@ ln -s ${BASEDIR}/.xbindkeysrc ~/.xbindkeysrc
 
 ln -s ${BASEDIR}/.config/dunst ~/.config/dunst
 ln -s ${BASEDIR}/.config/rofi ~/.config/rofi
-ln -s ${BASEDIR}/.config/i3 ~/.config/i3
-ln -s ${BASEDIR}/.config/i3blocks ~/.config/i3blocks
 ln -s ${BASEDIR}/.config/vifm ~/.config/vifm
 ln -s ${BASEDIR}/.config/pet ~/.config/pet
 
+# i3 setup
+ln -s ${BASEDIR}/.config/i3 ~/.config/i3
+ln -s ${BASEDIR}/.config/i3blocks ~/.config/i3blocks
