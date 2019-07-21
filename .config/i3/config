@@ -1,4 +1,5 @@
-set $TERMINAL urxvtc
+#set $TERMINAL urxvtc
+set $TERMINAL st
 set $TERMINAL_CLASS "^URxvt$"
 set $mod Mod4
 # Mod1 is Alt

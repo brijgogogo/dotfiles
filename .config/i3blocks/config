@@ -6,9 +6,9 @@
 color=#A4C2F4
 separator_block_width=7
 markup=none
-SCRIPTS_ROOT=/home/vik/Documents/dotfiles/.config/i3blocks/scripts
-SCRIPTS_DIR=/home/vik/Documents/dotfiles/.config/i3blocks/scripts/i3blocks-contrib
-MY_SCRIPTS_DIR=/home/vik/Documents/dotfiles/.config/i3blocks/scripts/my_scripts
+SCRIPTS_ROOT=/home/vik/docs/dotfiles/.config/i3blocks/scripts
+SCRIPTS_DIR=/home/vik/docs/dotfiles/.config/i3blocks/scripts/i3blocks-contrib
+MY_SCRIPTS_DIR=/home/vik/docs/dotfiles/.config/i3blocks/scripts/my_scripts
 
 [uptime]
 command=$MY_SCRIPTS_DIR/uptime
