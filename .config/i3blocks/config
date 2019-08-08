@@ -48,7 +48,8 @@ IGNORE=root vidyodesktop
 [bandwidth1]
 command=$SCRIPTS_DIR/bandwidth/bandwidth
 interval=5
-INTERFACE=wlp2s0
+#INTERFACE=wlp2s0
+INTERFACE=wlp0s20f3
 INLABEL=
 OUTLABEL=
 #TREAT_UNKNOWN_AS_UP=0
@@ -57,7 +58,8 @@ OUTLABEL=
 [my-wifi]
 command="$MY_SCRIPTS_DIR/wifi"
 LABEL=
-INTERFACE=wlp2s0
+#INTERFACE=wlp2s0
+INTERFACE=wlp0s20f3
 interval=5
 color=#005cc5
 

@@ -1,5 +1,12 @@
 #!/bin/bash
 
+pacman -S xbindkeys
+pacman -S newsboat
+pacman -S xsel xclip
+yay xvkbd
+pacman -S mpv youtube-dl
+
+
 #echo $BASH_SOURCE
 #echo dirname
 #echo "$(dirname "${BASH_SOURCE[0]}")"
@@ -30,3 +37,10 @@ ln -s ${BASEDIR}/.config/pet ~/.config/pet
 # i3 setup
 ln -s ${BASEDIR}/.config/i3 ~/.config/i3
 ln -s ${BASEDIR}/.config/i3blocks ~/.config/i3blocks
+
+# xbindkeys
+ln -s ${BASEDIR}/.xbindkeysrc ~/.xbindkeysrc
+
+# newsboat
+ln -s ${BASEDIR}/.newsboat ~/.newsboat
+

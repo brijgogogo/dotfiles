@@ -41,6 +41,7 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/limelight.vim'
+Plug 'dracula/vim'
 
 "syntax
 Plug 'leafgarland/typescript-vim'
@@ -129,9 +130,10 @@ set background=dark
 " colorscheme gruvbox
 " colorscheme spacegray
 " let g:solarized_termcolors=256
-colorscheme solarized
+" colorscheme solarized
 " let g:seoul256_background = 234
 " colorscheme seoul256
+color dracula
 set synmaxcol=200
 set cursorline
 set laststatus=2
@@ -145,7 +147,7 @@ set smartcase
 nnoremap <leader><space> :nohlsearch<CR>
 
 " vimwiki
-let wiki1 = {'path':'~/docs/wiki', 'ext':'.md'}
+let wiki1 = {'path':'/home/vik/docs/wiki', 'ext':'.md'}
 let wiki2 = {'path':'/home/vik/Documents/_data/_cloud/dropbox/vimwiki'}
 let g:vimwiki_list =[wiki1, wiki2]
 nnoremap <leader>wn :lnext<CR>

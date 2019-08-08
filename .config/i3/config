@@ -177,6 +177,7 @@ bindsym $mod+F4 exec $TERMINAL -e 'vifm'
 #bindsym $mod+Ctrl+m exec $TERMINAL -e 'alsamixer'
 bindsym $mod+Ctrl+m exec $TERMINAL -name alsamixer -e 'alsamixer'
 for_window [class=$TERMINAL_CLASS instance="^alsamixer$"] floating enable
+for_window [class=$TERMINAL_CLASS instance="^mpv$"] floating enable
 # start a terminal
 # bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Return exec $TERMINAL
