@@ -74,27 +74,17 @@ bindsym $mod+minus scratchpad show
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-#set $ws1 "1:"
-#set $ws2 "2:"
-#set $ws3 "3:"
-#set $ws4 "4:"
-#set $ws5 "5:"
-#set $ws6 "6:"
-#set $ws7 "7:"
-#set $ws8 "8:"
-#set $ws9 "9:"
-#set $ws10 "10:"
+set $ws1 "1<span color='#33bdf5'>:</span>"
+set $ws2 "2<span color='#ffff33'>:</span>"
+set $ws3 "3<span color='#ff79c6'>:</span>"
+set $ws4 "4<span color='#00A1F1'>:</span>"
+set $ws5 "5<span color='#F65314'>:</span>"
+set $ws6 "6<span color='#bd93f9'>:</span>"
+set $ws7 "7<span color='#ff5555'>:</span>"
+set $ws8 "8<span color='#ffb86c'>:</span>"
+set $ws9 "9<span color='#8be9fd'>:</span>"
+set $ws10 "10<span color='#50fa7b'>:</span>"
 
-set $ws1 "1:"
-set $ws2 "<span color='#ffff33'>2:</span>"
-set $ws3 "<span color='#cc00ff'>3:</span>"
-set $ws4  "<span color='#00A1F1'>4:</span>"
-set $ws5  "<span color='#F65314'>5:</span>"
-set $ws6  "<span color='#f7786b'>6:</span>"
-set $ws7  "<span color='#FBBC05'>7:</span>"
-set $ws8  "<span color='#00ffff'>8:</span>"
-set $ws9   "<span color='#33bdf5'>9:</span>"
-set $ws10 "<span color='#ff66ff'>10:</span>"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -163,7 +153,7 @@ bindsym $mod+r mode "resize"
 # startup
 exec_always --no-startup-id xrdb -load ~/.Xresources
 exec --no-startup-id redshift
-exec --no-startup-id feh --bg-scale --randomize --no-fehbg /home/vik/Documents/_data/_walls/*
+exec --no-startup-id feh --bg-scale --randomize --no-fehbg /home/vik/docs/walls/*
 
 # start programs on startup
 # exec --no-startup-id i3-msg 'workspace $ws1; exec $TERMINAL; workspace $ws5; exec $TERMINAL -e vifm; workspace $ws4; exec $TERMINAL -e vim -c VimwikiIndex; workspace $ws9; exec firefox;'
@@ -237,38 +227,26 @@ bindsym $mod+m bar mode toggle
 
 bar {
   colors {
-    background #$bgcolor
-    statusline #$txtcolor
-    separator #$faded_txt_color
-    # border background text
-    focused_workspace #$fgcolor #$bgcolor #$txtcolor
-    inactive_workspace #$bgcolor #$bgcolor #$txtcolor
-    urgent_workspace #$urgent #$urgent #$txtcolor
+    background #282A36
+    statusline #e1e5ee
+    separator  #44475A
+
+    focused_workspace  #44475A #44475A #F8F8F2
+    active_workspace   #282A36 #44475A #F8F8F2
+    inactive_workspace #282A36 #282A36 #BFBFBF
+    urgent_workspace   #FF5555 #FF5555 #F8F8F2
+    binding_mode       #FF5555 #FF5555 #F8F8F2
   }
 
-  #font xft:monospace regular 8
-  font pango:DejaVu Sans Mono, FontAwesome 8
-  #font pango: Monaco,Bold 11px
+  #font pango:Fantasque Sans Mono, FontAwesome, Noto Color Emoji 8
+  font pango:Fantasque Sans Mono 8
   position bottom
-  #status_command i3status -c ~/.config/i3/i3status.conf
+  #position top
+  #workspace_buttons no
   status_command i3blocks
-  #status_command 2>/tmp/i3blocks.err i3blocks -vvv -c ~/.config/i3blocks/config | tee /tmp/i3blocks.out
+  #status_command i3blocks -c ~/.config/i3blocks/config2
 }
 
-#bar {
-#  colors {
-#    background #$bgcolor
-#    statusline #$txtcolor
-#    separator #$faded_txt_color
-#    focused_workspace #$fgcolor #$bgcolor #$txtcolor
-#    inactive_workspace #$bgcolor #$bgcolor #$txtcolor
-#    urgent_workspace #$urgent #$urgent #$txtcolor
-#  }
-#  workspace_buttons no
-#  font pango:DejaVu Sans Mono, FontAwesome 8
-#  position top
-#  status_command i3blocks -c ~/.config/i3blocks/config2
-#}
 
 mode  "Passthrough Mode - Press mod+F12 to exit" {
         bindsym $mod+F12 mode "default"
@@ -276,9 +254,9 @@ mode  "Passthrough Mode - Press mod+F12 to exit" {
 bindsym $mod+F12 mode "Passthrough Mode - Press mod+F12 to exit"
 
 # screenshot
-bindsym Print exec scrot ~/Documents/screenshot_%Y_%m_%d_%H_%M_%S.png
-bindsym --release $mod+Print exec scrot -s ~/Documents/screenshot_%Y_%m_%d_%H_%M_%S.png
-bindsym --release $mod+Shift+Print exec scrot -u -d 4 ~/Documents/screenshot_%Y_%m_%d_%H_%M_%S.png
+bindsym Print exec scrot ~/docs/screenshots/screenshot_%Y_%m_%d_%H_%M_%S.png
+bindsym --release $mod+Print exec scrot -s ~/docs/screenshots/screenshot_%Y_%m_%d_%H_%M_%S.png
+bindsym --release $mod+Shift+Print exec scrot -u -d 4 ~/docs/screenshots/screenshot_%Y_%m_%d_%H_%M_%S.png
 
 bindsym --release Caps_Lock exec pkill -SIGRTMIN+10 i3blocks
 bindsym --release Num_Lock exec pkill -SIGRTMIN+10 i3blocks
@@ -303,11 +281,21 @@ default_border pixel 1
 hide_edge_borders both
 
 # Layout colors            border       bg        text
-client.focused             #$border #$border #$txtcolor
-client.unfocused           #$border #$border #$txtcolor
-client.focused_inactive    #$border #$border #$txtcolor
-client.urgent              #$urgent    #$bgcolor  #$txtcolor
-client.background          #$bgcolor
+#client.focused             #$border #$border #$txtcolor
+#client.unfocused           #$border #$border #$txtcolor
+#client.focused_inactive    #$border #$border #$txtcolor
+#client.urgent              #$urgent    #$bgcolor  #$txtcolor
+#client.background          #$bgcolor
+
+#https://github.com/dracula/i3
+# class                 border  bground text    indicator child_border
+client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4
+client.focused_inactive #44475A #44475A #F8F8F2 #44475A   #44475A
+client.unfocused        #282A36 #282A36 #BFBFBF #282A36   #282A36
+client.urgent           #44475A #FF5555 #F8F8F2 #FF5555   #FF5555
+client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
+client.background       #F8F8F2
+
 
 # always start URxvt in workspace 4
 # assign [class="URxvt"] $ws4
@@ -331,9 +319,13 @@ for_window [class="Yad"] floating enable
 #bindsym --release XF86AudioLowerVolume exec pkill -SIGRTMIN+10 i3blocks
 
 # change volume or toggle mute
-bindsym XF86AudioRaiseVolume exec amixer -q -D pulse sset Master 5%+ && pkill -RTMIN+10 i3blocks
-bindsym XF86AudioLowerVolume exec amixer -q -D pulse sset Master 5%- && pkill -RTMIN+10 i3blocks
-bindsym XF86AudioMute exec amixer -q -D pulse sset Master toggle && pkill -RTMIN+10 i3blocks
+# bindsym XF86AudioRaiseVolume exec amixer -q -D pulse sset Master 5%+ && pkill -RTMIN+10 i3blocks
+# bindsym XF86AudioLowerVolume exec amixer -q -D pulse sset Master 5%- && pkill -RTMIN+10 i3blocks
+# bindsym XF86AudioMute exec amixer -q -D pulse sset Master toggle && pkill -RTMIN+10 i3blocks
+bindsym XF86AudioRaiseVolume exec amixer sset Master unmute && amixer set Master 5%+ && pkill -RTMIN+10 i3blocks
+bindsym XF86AudioLowerVolume exec amixer set Master 5%- && pkill -RTMIN+10 i3blocks
+bindsym XF86AudioMute exec amixer sset Master mute && pkill -RTMIN+10 i3blocks
+
 
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play-pause

@@ -66,3 +66,12 @@ F8
 
 "chromium"
 F7
+
+
+# Thumb button
+"xte 'keydown Alt_L' 'keydown Left' 'keyup Left' 'keyup Alt_L'"
+    m:0xc + c:23
+
+
+
+

@@ -3,17 +3,14 @@
 
 # Global properties
 # color=#F3F4F5
-color=#A4C2F4
+#color=#A4C2F4
+color=#e1e5ee
 separator_block_width=7
 markup=none
 SCRIPTS_ROOT=/home/vik/docs/dotfiles/.config/i3blocks/scripts
 SCRIPTS_DIR=/home/vik/docs/dotfiles/.config/i3blocks/scripts/i3blocks-contrib
 MY_SCRIPTS_DIR=/home/vik/docs/dotfiles/.config/i3blocks/scripts/my_scripts
 
-[uptime]
-command=$MY_SCRIPTS_DIR/uptime
-label=
-interval=60
 
 [caps-lock]
 command=xset -q | grep Caps | awk '{ if($4 == "on") print "Caps" }'
@@ -33,8 +30,14 @@ interval=once
 signal=10
 color=#d73a49
 
+[ex-rates]
+label=
+command=curl -s -X GET https://openexchangerates.org/api/latest.json?app_id=7ec807a8263d4776a35c23f04b10e153 | grep 'INR\|EUR' | sed 'N;s/\n//' | sed 's/\s//g' | sed 's/"//g' | sed 's/,/ /g'
+interval=3600
+
 [my-weather]
-command=curl wttr.in?format="%t+%w+%C" | xargs echo
+command=curl wttr.in?format="%t+%w+%c+%h" | xargs echo
+#command=curl wttr.in?format=3 | xargs echo
 interval=3600
 
 [aur-update]
@@ -61,7 +64,8 @@ LABEL=
 #INTERFACE=wlp2s0
 INTERFACE=wlp0s20f3
 interval=5
-color=#005cc5
+#color=#005cc5
+#color=#1a936f
 
 [iface]
 command=$SCRIPTS_DIR/iface/iface
@@ -111,12 +115,17 @@ interval=5
 markup=pango
 #min_width=bat: ■■■■■
 
+[uptime]
+command=$MY_SCRIPTS_DIR/uptime
+label=
+interval=60
+
 [calendar]
 command=$MY_SCRIPTS_DIR/cal.sh
 interval=5
 label=
 #DATEFMT=+%H:%M:%S
-DATEFMT=+%a, %d %b %H:%M
+DATEFMT=+ %a, %d %b %H:%M
 # SHORTFMT=+%H:%M:%S
 HEIGHT=200
 WIDTH=200

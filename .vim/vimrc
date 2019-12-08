@@ -2,7 +2,7 @@
 " basic
 """""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible
-filetype plugin on
+filetype plugin indent on
 syntax on
 set encoding=utf-8
 set number
@@ -432,4 +432,16 @@ au BufNewFile,BufRead *.js, *.html, *.css
     \ set tabstop=2
     \ set softtabstop=2
     \ set shiftwidth=2
+
+function!GetMyName()
+  echo 'Brij'
+endfunction
+
+command! MyName call GetMyName()
+
+nnoremap M :MyName<CR>
+
+
+
+
 

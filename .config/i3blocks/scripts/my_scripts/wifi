@@ -21,7 +21,7 @@ echo $LABEL $SSID $QUALITY% # short text
 
 # color
 if [[ $QUALITY -ge 70 ]]; then
-    echo "#52D83A"
+    echo "#1a936f"
 elif [[ $QUALITY -ge 60 ]]; then
     echo "#FCE14B"
 elif [[ $QUALITY -ge 35 ]]; then

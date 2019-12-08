@@ -65,7 +65,7 @@ set norunexec
 " Selected color scheme
 
 " colorscheme Default
-colorscheme zenburn
+colorscheme dracula
 
 " Format for displaying time in file list. For example:
 " TIME_STAMP_FORMAT=%m/%d-%H:%M
@@ -232,6 +232,12 @@ filetype *.[1-8] man ./%c
 fileviewer *.[1-8] man ./%c | col -b
 
 " Images
+"filetype *.jpg,*.jpeg,*.png,*.gif feh %f 2>/dev/null &
+
+"fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
+"         \ show_image.sh %px %py %pw %ph %c
+
+
 "filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
 "        \ {View in sxiv}
 "        \ sxiv %f,
