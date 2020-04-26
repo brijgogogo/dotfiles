@@ -1,0 +1,14 @@
+help
+colorscheme solarized-dark
+colorscheme jellybeans
+colorscheme gruvbox
+colorscheme dracula
+colorscheme cyan
+add http://uk7.internet-radio.com:8040/listen.pls&t=.m3u
+pl-create radio
+add /home/vik/docs/music/
+clear 
+cd 
+pwd
+cd ..
+q

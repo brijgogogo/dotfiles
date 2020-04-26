@@ -148,7 +148,7 @@ nnoremap <leader><space> :nohlsearch<CR>
 
 " vimwiki
 let wiki1 = {'path':'/home/vik/docs/wiki', 'ext':'.md'}
-let wiki2 = {'path':'/home/vik/Documents/_data/_cloud/dropbox/vimwiki'}
+let wiki2 = {'path':'/home/vik/docs/cloud/dropbox_b1/vimwiki'}
 let g:vimwiki_list =[wiki1, wiki2]
 nnoremap <leader>wn :lnext<CR>
 nnoremap <leader>wp :lprev<CR>

@@ -1,0 +1,11 @@
+
+[Default Applications]
+image/jpeg=feh.desktop
+image/png=feh.desktop
+text/html=firefox.desktop
+x-scheme-handler/mailto=opera.desktop
+x-scheme-handler/msteams=teams.desktop
+x-scheme-handler/http=browser.desktop
+x-scheme-handler/https=browser.desktop
+application/pdf=okularApplication_pdf.desktop
+x-scheme-handler/postman=Postman.desktop

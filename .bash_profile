@@ -1,14 +1,5 @@
-#
-# ~/.bash_profile
-#
 
-[[ -f ~/.bashrc ]] && . ~/.bashrc
+[[ -f ~/.config/.profile ]] && ~/.config/.profile
 
-# autostart X at login
-if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
-	exec startx ~/.xinitrc i3
-	# xinit i3
-fi
-
-
+echo $my_n="bb"
 

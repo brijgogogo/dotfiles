@@ -250,8 +250,11 @@ pix-area() { sleep 2 && scrot -s "$PATH_SCREENSHOT/windowed_`date +'%F_%Hh%Ms%S'
 
 
 
+# todo.cli
+alias t='/usr/bin/todo.sh -d $HOME/.todo/config'
 
 
+alias vim="nvim"
 
 
 

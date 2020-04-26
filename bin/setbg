@@ -1,0 +1,2 @@
+feh --bg-scale --randomize --no-fehbg $CONFIG_DIR/walls/*
+

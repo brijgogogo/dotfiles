@@ -72,6 +72,7 @@ ln -s ${BASEDIR}/root/etc/X11/xorg.conf.d/30-touchpad.conf /etc/X11/xorg.conf.d/
 ln -s ${BASEDIR}/root/etc/X11/xorg.conf.d/00-keyboard.conf /etc/X11/xorg.conf.d/00-keyboard.conf
 
 
-
+# packages
+# rofi-calc
 
 

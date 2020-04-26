@@ -25,3 +25,6 @@ alias rangerc='vim ~/.config/ranger/rc.conf'
 alias weather="curl -H 'Accept-Language: en' 'wttr.in/?1?n'"
 alias weatherCurrent="curl -H 'Accept-Language: en' 'wttr.in/?0?Q'"
 alias weatherFull="curl -H 'Accept-Language: en' 'wttr.in/'"
+
+
+alias vim="nvim"

@@ -1,0 +1,169 @@
+# i3blocks config file
+#  http://vivien.github.io/i3blocks
+
+# Global properties
+# color=#F3F4F5
+#color=#A4C2F4
+color=#e1e5ee
+separator_block_width=7
+markup=none
+SCRIPTS_ROOT=/home/vik/.config/i3blocks/scripts
+SCRIPTS_DIR=/home/vik/.config/i3blocks/scripts/i3blocks-contrib
+MY_SCRIPTS_DIR=/home/vik/.config/i3blocks/scripts/my_scripts
+
+
+[caps-lock]
+command=xset -q | grep Caps | awk '{ if($4 == "on") print "Caps" }'
+interval=once
+signal=10
+color=#d73a49
+
+[num-lock]
+command=xset -q | grep Num | awk '{ if($8 == "on") print "Nums" }'
+interval=once
+signal=10
+color=#d73a49
+
+[scroll-lock]
+command=xset -q | grep Scroll | awk '{ if($12 == "on") print "Scroll" }'
+interval=once
+signal=10
+color=#d73a49
+
+#[ex-rates]
+#label=
+# command=curl -s -X GET https://openexchangerates.org/api/latest.json?app_id=7ec807a8263d4776a35c23f04b10e153 | grep 'INR\|EUR' | sed 'N;s/\n//' | sed 's/\s//g' | sed 's/"//g' | sed 's/,/ /g'
+# interval=3600
+
+#[my-weather]
+# command=curl wttr.in?format="%t+%w+%c+%h" | xargs echo
+#command=curl wttr.in?format=3 | xargs echo
+# interval=3600
+
+# [aur-update]
+# command=$SCRIPTS_DIR/aur-update/aur-update
+# markup=pango
+# interval=43200
+# UPDATE_COLOR=#FCE14B
+# QUIET=1
+# IGNORE=root vidyodesktop
+
+[bandwidth1]
+command=$SCRIPTS_DIR/bandwidth/bandwidth
+interval=5
+#INTERFACE=wlp2s0
+INTERFACE=wlp0s20f3
+INLABEL=
+OUTLABEL=
+#TREAT_UNKNOWN_AS_UP=0
+#
+
+# [essid]
+#command=$SCRIPTS_DIR/essid/essid
+# interval=60
+#INTERFACE=wlan0
+
+[my-wifi]
+command="$MY_SCRIPTS_DIR/wifi"
+LABEL=
+#INTERFACE=wlp2s0
+INTERFACE=wlp0s20f3
+interval=5
+#color=#005cc5
+#color=#1a936f
+
+# [iface]
+# command=$SCRIPTS_DIR/iface/iface
+#LABEL=wlan0:
+#IFACE=wlan0
+#ADDRESS_FAMILY=inet6?
+#color=#00FF00
+#color=#005cc5
+interval=10
+
+[volume]
+command=$SCRIPTS_DIR/volume/volume
+LABEL=
+interval=once
+signal=10
+
+[brightness]
+label=
+interval=5
+command=$SCRIPTS_ROOT/brightness
+separator=true
+
+[disk-home]
+label=
+command=df -h -P -l $HOME | awk '/\/.*/ { print $4"/"$2; exit 0 }'
+interval=30
+separator=false
+
+[temperature]
+command=$SCRIPTS_DIR/temperature/temperature
+label=
+interval=10
+T_WARN=50
+T_CRIT=60
+#SENSOR_CHIP=""
+
+# [cpu_usage]
+# command=$SCRIPTS_DIR/cpu_usage/cpu_usage
+# interval=10
+# LABEL=CPU
+#min_width=CPU: 100.00%
+#T_WARN=50
+#T_CRIT=80
+#DECIMALS=2
+
+# [memory]
+# command=$SCRIPTS_DIR/memory/memory
+#  label=MEM
+# interval=30
+
+
+# [batterybar]
+#run batterybar -h for options
+# command=$SCRIPTS_ROOT/batterybar
+#label=⚡
+# interval=5
+# markup=pango
+#min_width=bat: ■■■■■
+
+
+
+
+[battery2]
+command=$SCRIPTS_DIR/battery2/battery2
+markup=pango
+interval=30
+
+[uptime]
+command=$MY_SCRIPTS_DIR/uptime
+label=
+interval=60
+
+[calendar]
+command=$MY_SCRIPTS_DIR/cal.sh
+interval=5
+label=
+#DATEFMT=+%H:%M:%S
+DATEFMT=+ %a, %d %b %H:%M
+# SHORTFMT=+%H:%M:%S
+HEIGHT=200
+WIDTH=200
+
+[shutdown_menu]
+full_text=
+command=$SCRIPTS_DIR/shutdown_menu/shutdown_menu
+color=#d73a49
+FG_COLOR=#bbbbbb
+BG_COLOR=#111111
+HLFG_COLOR=#111111
+HLBG_COLOR=#bbbbbb
+BORDER_COLOR=#222222
+ROFI_TEXT=System action:
+ROFI_OPTIONS=-width 12 -location 5 -hide-scrollbar -bw 2
+ENABLE_CONFIRMATIONS=true
+LAUNCHER=rofi
+LOCKSCRIPT=~/.config/i3/i3exit.sh lock, mode "default"

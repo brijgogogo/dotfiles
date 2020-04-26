@@ -1,57 +1,58 @@
 #
 # ~/.bashrc
 #
+# [ -n "$PS1" ] && source ~/.bash_profile;
 
 
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
+export my_name1="vicky"
 
-source ~/.shell_common_rc
-source ~/.aliasrc
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
-# git
-if [ -f ~/.git-completion.bash ]; then
-  source ~/.git-completion.bash
+# aliases
+if [ -f "$CONFIG_DIR/aliasrc" ]; then
+  source "$CONFIG_DIR/aliasrc"
 fi
 
+# nnn
+# bookmarks
+export NNN_BMS='d:~/docs/;D:~/Downloads/;c:~/docs/cloud/;s:~/docs/screenshots/;w:~/docs/work/'
+export NNN_USE_EDITOR=1                                 # use the $EDITOR when opening text files
+# export NNN_SSHFS_OPTS="sshfs -o follow_symlinks"        # make sshfs follow symlinks on the remote
+# export NNN_COLORS="2136"                        # use a different color for each context
+# export NNN_TRASH=1                                      # trash (needs trash-cli) instead of delete
+# promp indicating shell exit will take you back to nnn
+[ -n "$NNNLVL" ] && PS1="N$NNNLVL $PS1"
 
-# prompt
-export PS1='\[\033[00;32m\]\u\[\033[00;33m\]@\[\033[00;32m\]\h\[\033[01;30m\]:\[\033[01;36m\]\w\[\033[01;37m\]$ \[\033[00m\]'
-#export PS1='\[\033[01;32m\][\u@\h\[\033[01;37m\] \W\[\033[01;32m\]]\$\[\033[00m\] '
-#PS1='[\u@\h \W]\$ '
+# cd on quit of nnn
+n ()
+{
+    # Block nesting of nnn in subshells
+    if [ -n $NNNLVL ] && [ "${NNNLVL:-0}" -ge 1 ]; then
+        echo "nnn is already running"
+        return
+    fi
 
-# color echo
-function echo_blue() { echo -e "\x1b[34m\x1b[1m"$@"\x1b[0m"; }
-function echo_green() { echo -e "\x1b[32m\x1b[1m"$@"\x1b[0m"; }
-function echo_red() { echo -e "\x1b[31m\x1b[1m"$@"\x1b[0m"; }
+    # The default behaviour is to cd on quit (nnn checks if NNN_TMPFILE is set)
+    # To cd on quit only on ^G, remove the "export" as in:
+    #     NNN_TMPFILE="${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.lastd"
+    # NOTE: NNN_TMPFILE is fixed, should not be modified
+    # export NNN_TMPFILE="${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.lastd"
+    NNN_TMPFILE="${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.lastd"
 
-# calculator fuction : ? 4+4
-function ?() { echo "$*" | bc -l; }
+    # Unmask ^Q (, ^V etc.) (if required, see `stty -a`) to Quit nnn
+    # stty start undef
+    # stty stop undef
+    # stty lwrap undef
+    # stty lnext undef
 
+    nnn "$@"
 
-# Set up Node Version Manager
-export NVM_DIR="$HOME/.nvm"
-export NVM_SOURCE="/usr/share/nvm"
-[ -s "$NVM_SOURCE/nvm.sh" ] && . "$NVM_SOURCE/nvm.sh"
+    if [ -f "$NNN_TMPFILE" ]; then
+            . "$NNN_TMPFILE"
+            rm -f "$NNN_TMPFILE" > /dev/null
+    fi
+}
 
-# allow user-wide installations of node packages
-#PATH="$HOME/.node_modules/bin:$PATH"
-#export npm_config_prefix=~/.node_modules
-
-# tools
-PATH="$HOME/tools:$PATH"
-
-
-# fzf
-# export FZF_DEFAULT_COMMAND='git ls-files'
-# ripgrep for fzf
-export FZF_DEFAULT_COMMAND='rg --files'
-
-# navi cheats
-export NAVI_PATH="/home/vik/docs/cheat-sheets"
-
+# nnn plugins
+export NNN_PLUG='o:fzopen;p:mocplay;d:diffs;m:nmount;n:notes;v:imgviu;t:imgthumb'
 
 # tmux
 # if [[ -z "$TMUX" ]]; then
@@ -60,13 +61,43 @@ export NAVI_PATH="/home/vik/docs/cheat-sheets"
 # If not running interactively, do not do anything
 # [[ $- != *i* ]] && return
 # [[ -z "$TMUX" ]] && exec tmux
-if [[ $DISPLAY ]]; then
+# if [[ $DISPLAY ]]; then
     # If not running interactively, do not do anything
-    [[ $- != *i* ]] && return
-    [[ -z "$TMUX" ]] && exec tmux
-fi
+    # [[ $- != *i* ]] && return
+    #[[ -z "$TMUX" ]] && exec tmux # uncomment this to start tmux by default
+# fi
 
 
+
+# prompt
+# show diffent prompt in nvim terminal buffer
+# if [ -n " $NVIM_LISTEN_ADDRESS " ]; then export PS1="» "
+# else
+  # export PS1= "\$ "
+#   export PS1='\[\033[00;32m\]\u\[\033[00;33m\]@\[\033[00;32m\]\h\[\033[01;30m\]:\[\033[01;36m\]\w\[\033[01;37m\]$ \[\033[00m\]'
+# fi
+
+RED="\[$(tput setaf 1)\]"
+GREEN="\[$(tput setaf 2)\]"
+YELLOW="\[$(tput setaf 3)\]"
+PURPLE="\[$(tput setaf 4)\]"
+PINK="\[$(tput setaf 5)\]"
+BLUE="\[$(tput setaf 6)\]"
+GRAY="\[$(tput setaf 7)\]"
+RESET="\[$(tput sgr0)\]"
+
+PS1="${BLUE}\u${GRAY}@${YELLOW}\h${GREEN}:${PURPLE}\W${RESET}$ "
+
+# prevent nesting of nvim
+# if [ -n " $NVIM_LISTEN_ADDRESS " ];
+# then
+#   if [ -x " $(command -v nvr) " ];
+#   then
+#      alias nvim=nvr
+#    else
+#      alias nvim='echo "No nesting!"'
+#    fi
+# fi
 
 
 

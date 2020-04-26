@@ -1,0 +1,4 @@
+{
+ "coc.preferences.formatOnSaveFiletypes": ["javascript", "javascriptreact", "typescript", "typescriptreact", "json" , "graphql", "css", "markdown"],
+ "tsserver.npm": "/home/vik/.nvm/versions/node/v12.8.0/bin/npm"
+}

@@ -8,9 +8,9 @@ export TERMINAL="urxvt"
 export BROWSER="firefox"
 
 # start i3
-if [[ "$(tty)" = "/dev/tty1" ]]; then
-  pgrep i3 || startx
-fi
+# if [[ "$(tty)" = "/dev/tty1" ]]; then
+#  pgrep i3 || startx
+# fi
 
 
 # go-lang
@@ -22,23 +22,23 @@ export JAVA_HOME="/usr/lib/jvm/default-runtime"
 export PATH=$JAVA_HOME/bin:$PATH
 
 # If not running interactively, don't do anything
-[[ $- != *i* ]] && return
+# [[ $- != *i* ]] && return
 
 #PS1='[\u@\h \W]\$ '
 
-export XDG_CONFIG_HOME=~/.config
+# export XDG_CONFIG_HOME=~/.config
 
 # set up Node Version Manager
-source /usr/share/nvm/init-nvm.sh
+# source /usr/share/nvm/init-nvm.sh
 
 # allow global node package installations for the current user
-PATH="$HOME/.node_modules/bin:$PATH"
-export npm_config_prefix=~/.node_modules
+# PATH="$HOME/.node_modules/bin:$PATH"
+# export npm_config_prefix=~/.node_modules
 
 # set my scripts path
-PATH="$HOME/Documents/_data/_cloud/dropbox/scripts:$HOME/Documents/dotfiles/scripts:$PATH"
+# PATH="$HOME/Documents/_data/_cloud/dropbox/scripts:$HOME/Documents/dotfiles/scripts:$PATH"
 
 # add ruby gems path
-PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"
+# PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"
 
-XDG_DATA_DIRS=/usr/local/share:/usr/share
+# XDG_DATA_DIRS=/usr/local/share:/usr/share

@@ -26,4 +26,25 @@ rclone/
 solaar/
 vlc/
 yay/
+nvim/session
+nvim/pack
+expressvpn
+coc
+Postman
+BraveSoftware
+GitExtensions
+QtProject.conf
+skypeforlinux
+teams
+sys_config_files
+okular*
+pet
+gtk-2.0
+discord
+sxiv
+qalculate
+newsboat/cache.db
+newsboat/history.cmdline
+newsboat/history.search
+nnn
 
