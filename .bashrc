@@ -3,23 +3,66 @@
 #
 # [ -n "$PS1" ] && source ~/.bash_profile;
 
-
-export my_name1="vicky"
-
 # aliases
 if [ -f "$CONFIG_DIR/aliasrc" ]; then
   source "$CONFIG_DIR/aliasrc"
 fi
 
-# nnn
-# bookmarks
-export NNN_BMS='d:~/docs/;D:~/Downloads/;c:~/docs/cloud/;s:~/docs/screenshots/;w:~/docs/work/'
-export NNN_USE_EDITOR=1                                 # use the $EDITOR when opening text files
-# export NNN_SSHFS_OPTS="sshfs -o follow_symlinks"        # make sshfs follow symlinks on the remote
-# export NNN_COLORS="2136"                        # use a different color for each context
-# export NNN_TRASH=1                                      # trash (needs trash-cli) instead of delete
-# promp indicating shell exit will take you back to nnn
-[ -n "$NNNLVL" ] && PS1="N$NNNLVL $PS1"
+# vi mode in bash
+set -o vi
+
+
+RED="\[$(tput setaf 1)\]"
+GREEN="\[$(tput setaf 2)\]"
+YELLOW="\[$(tput setaf 3)\]"
+PURPLE="\[$(tput setaf 4)\]"
+PINK="\[$(tput setaf 5)\]"
+BLUE="\[$(tput setaf 6)\]"
+GRAY="\[$(tput setaf 7)\]"
+RESET="\[$(tput sgr0)\]"
+
+# prompt
+export PS1="${BLUE}\u${GRAY}@${YELLOW}\h${GREEN}:${PURPLE}\W${RESET}$ "
+# export PS1='\[\033[01;32m\][\u@\h\[\033[01;37m\] \W\[\033[01;32m\]]\$\[\033[00m\] '
+#PS1='[\u@\h \W]\$ '
+
+
+# set term only if not in tmux
+# [ -z "$TMUX" ] && export TERM=xterm-256color
+
+# check number of colors supported
+# tput colors
+
+# If not running interactively, do not do anything
+# [[ $- != *i* ]] && return
+# [[ -z "$TMUX" ]] && exec tmux
+# if [[ $DISPLAY ]]; then
+    # If not running interactively, do not do anything
+    # [[ $- != *i* ]] && return
+    #[[ -z "$TMUX" ]] && exec tmux # uncomment this to start tmux by default
+# fi
+
+
+
+# prompt
+# show diffent prompt in nvim terminal buffer
+# if [ -n " $NVIM_LISTEN_ADDRESS " ]; then export PS1="» "
+# else
+  # export PS1= "\$ "
+#   export PS1='\[\033[00;32m\]\u\[\033[00;33m\]@\[\033[00;32m\]\h\[\033[01;30m\]:\[\033[01;36m\]\w\[\033[01;37m\]$ \[\033[00m\]'
+# fi
+
+# prevent nesting of nvim
+# if [ -n " $NVIM_LISTEN_ADDRESS " ];
+# then
+#   if [ -x " $(command -v nvr) " ];
+#   then
+#      alias nvim=nvr
+#    else
+#      alias nvim='echo "No nesting!"'
+#    fi
+# fi
+
 
 # cd on quit of nnn
 n ()
@@ -51,56 +94,16 @@ n ()
     fi
 }
 
-# nnn plugins
-export NNN_PLUG='o:fzopen;p:mocplay;d:diffs;m:nmount;n:notes;v:imgviu;t:imgthumb'
+export GOPATH="$HOME/go"
+export PATH="$PATH:$HOME/go/bin"
+
+
+
+export TMUXP_CONFIGDIR=$CONFIG_DIR/.tmuxp
+
 
 # tmux
-# if [[ -z "$TMUX" ]]; then
-#  tmux
-#fi
-# If not running interactively, do not do anything
-# [[ $- != *i* ]] && return
-# [[ -z "$TMUX" ]] && exec tmux
-# if [[ $DISPLAY ]]; then
-    # If not running interactively, do not do anything
-    # [[ $- != *i* ]] && return
-    #[[ -z "$TMUX" ]] && exec tmux # uncomment this to start tmux by default
+# if [[ "$TERM" != "screen-256color" && $DISPLAY ]]; then
+#  tmux attach-session -t "$USER" || tmux new-session -s "$USER"
 # fi
-
-
-
-# prompt
-# show diffent prompt in nvim terminal buffer
-# if [ -n " $NVIM_LISTEN_ADDRESS " ]; then export PS1="» "
-# else
-  # export PS1= "\$ "
-#   export PS1='\[\033[00;32m\]\u\[\033[00;33m\]@\[\033[00;32m\]\h\[\033[01;30m\]:\[\033[01;36m\]\w\[\033[01;37m\]$ \[\033[00m\]'
-# fi
-
-RED="\[$(tput setaf 1)\]"
-GREEN="\[$(tput setaf 2)\]"
-YELLOW="\[$(tput setaf 3)\]"
-PURPLE="\[$(tput setaf 4)\]"
-PINK="\[$(tput setaf 5)\]"
-BLUE="\[$(tput setaf 6)\]"
-GRAY="\[$(tput setaf 7)\]"
-RESET="\[$(tput sgr0)\]"
-
-PS1="${BLUE}\u${GRAY}@${YELLOW}\h${GREEN}:${PURPLE}\W${RESET}$ "
-
-# prevent nesting of nvim
-# if [ -n " $NVIM_LISTEN_ADDRESS " ];
-# then
-#   if [ -x " $(command -v nvr) " ];
-#   then
-#      alias nvim=nvr
-#    else
-#      alias nvim='echo "No nesting!"'
-#    fi
-# fi
-
-
-
-
-
 

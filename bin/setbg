@@ -1,2 +1,3 @@
-feh --bg-scale --randomize --no-fehbg $CONFIG_DIR/walls/*
+# feh --bg-scale --randomize --no-fehbg $CONFIG_DIR/walls/*
+nitrogen --restore &
 

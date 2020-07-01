@@ -1,0 +1,26 @@
+session_name: mtbe
+start_directory: ~/docs/work/
+windows:
+  - window_name: mtbe
+    start_directory: ./mtbe
+    focus: true
+    panes:
+      - shell_command:
+        - vim -S ~/.config/nvim/session/mtbe
+  - window_name: mtbe_console
+    start_directory: ./mtbe
+    panes:
+      -
+  - window_name: mtdb
+    start_directory: ./mtdb
+    panes:
+      - shell_command:
+        - vim -S ~/.config/nvim/session/mtdb
+  - window_name: mtdb_console
+    start_directory: ./mtdb
+    panes:
+      -
+  - window-name: mtdb_pg
+    panes:
+      - shell_command:
+        - start-pgadmin.sh

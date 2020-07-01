@@ -573,31 +573,227 @@ key_bindings:
 # Good color schemes : Ayu Dark, Nord, Nova, Solarized Dark
 # https://github.com/alacritty/alacritty/wiki/Color-schemes, Oceanic Next, One Dark
 
-# Colors (Nord)
-colors:
-   # Default colors
-   primary:
-     background: '#2E3440'
-     foreground: '#D8DEE9'
+schemes:
+  # Colors (Dracula)
+  dracula: &dracula
+    primary:
+      background: '#282a36'
+      foreground: '#f8f8f2'
+    cursor:
+      text: '#44475a'
+      cursor: '#f8f8f2'
+    normal:
+      black:   '#000000'
+      red:     '#ff5555'
+      green:   '#50fa7b'
+      yellow:  '#f1fa8c'
+      blue:    '#bd93f9'
+      magenta: '#ff79c6'
+      cyan:    '#8be9fd'
+      white:   '#bfbfbf'
+    bright:
+      black:   '#4d4d4d'
+      red:     '#ff6e67'
+      green:   '#5af78e'
+      yellow:  '#f4f99d'
+      blue:    '#caa9fa'
+      magenta: '#ff92d0'
+      cyan:    '#9aedfe'
+      white:   '#e6e6e6'
+    dim:
+      black:   '#14151b'
+      red:     '#ff2222'
+      green:   '#1ef956'
+      yellow:  '#ebf85b'
+      blue:    '#4d5b86'
+      magenta: '#ff46b0'
+      cyan:    '#59dffc'
+      white:   '#e6e6d1'
+  # Colors (Nord)
+  nord: &nord
+     primary:
+       background: '#2E3440'
+       foreground: '#D8DEE9'
+     normal:
+       black:   '#3B4252'
+       red:     '#BF616A'
+       green:   '#A3BE8C'
+       yellow:  '#EBCB8B'
+       blue:    '#81A1C1'
+       magenta: '#B48EAD'
+       cyan:    '#88C0D0'
+       white:   '#E5E9F0'
+     bright:
+       black:   '#4C566A'
+       red:     '#BF616A'
+       green:   '#A3BE8C'
+       yellow:  '#EBCB8B'
+       blue:    '#81A1C1'
+       magenta: '#B48EAD'
+       cyan:    '#8FBCBB'
+       white:   '#ECEFF4'
+  # Colors (Oceanic Next)
+  oceanic_next: &oceanic_next
+    # Default colors
+    primary:
+      background: '#1b2b34'
+      foreground: '#d8dee9'
 
-   # Normal colors
-   normal:
-     black:   '#3B4252'
-     red:     '#BF616A'
-     green:   '#A3BE8C'
-     yellow:  '#EBCB8B'
-     blue:    '#81A1C1'
-     magenta: '#B48EAD'
-     cyan:    '#88C0D0'
-     white:   '#E5E9F0'
+    # Colors the cursor will use if `custom_cursor_colors` is true
+    cursor:
+      text: '#1b2b34'
+      cursor: '#ffffff'
 
-   # Bright colors
-   bright:
-     black:   '#4C566A'
-     red:     '#BF616A'
-     green:   '#A3BE8C'
-     yellow:  '#EBCB8B'
-     blue:    '#81A1C1'
-     magenta: '#B48EAD'
-     cyan:    '#8FBCBB'
-     white:   '#ECEFF4'
+    # Normal colors
+    normal:
+      black:   '#343d46'
+      red:     '#EC5f67'
+      green:   '#99C794'
+      yellow:  '#FAC863'
+      blue:    '#6699cc'
+      magenta: '#c594c5'
+      cyan:    '#5fb3b3'
+      white:   '#d8dee9'
+
+    # Bright colors
+    bright:
+      black:   '#343d46'
+      red:     '#EC5f67'
+      green:   '#99C794'
+      yellow:  '#FAC863'
+      blue:    '#6699cc'
+      magenta: '#c594c5'
+      cyan:    '#5fb3b3'
+      white:   '#d8dee9'
+  # Colors (One Dark)
+  one_dark: &one_dark
+    # Default colors
+    primary:
+      background: '#282c34'
+      foreground: '#abb2bf'
+
+    # Normal colors
+    normal:
+      # NOTE: Use '#131613' for the `black` color if you'd like to see
+      # black text on the background.
+      black:   '#282c34'
+      red:     '#e06c75'
+      green:   '#98c379'
+      yellow:  '#d19a66'
+      blue:    '#61afef'
+      magenta: '#c678dd'
+      cyan:    '#56b6c2'
+      white:   '#abb2bf'
+
+    # Bright colors
+    bright:
+      black:   '#5c6370'
+      red:     '#e06c75'
+      green:   '#98c379'
+      yellow:  '#d19a66'
+      blue:    '#61afef'
+      magenta: '#c678dd'
+      cyan:    '#56b6c2'
+      white:   '#ffffff'
+  # Colors (One Light)
+  one_light: &one_light
+    # Default colors
+    primary:
+      foreground: '#282c34'
+      background: '#ffffff'
+
+    # Normal colors
+    normal:
+      # NOTE: Use '#131613' for the `black` color if you'd like to see
+      # black text on the background.
+      black:   '#282c34'
+      red:     '#e06c75'
+      green:   '#98c379'
+      yellow:  '#d19a66'
+      blue:    '#61afef'
+      magenta: '#c678dd'
+      cyan:    '#56b6c2'
+      white:   '#abb2bf'
+
+    # Bright colors
+    bright:
+      black:   '#5c6370'
+      red:     '#e06c75'
+      green:   '#98c379'
+      yellow:  '#d19a66'
+      blue:    '#61afef'
+      magenta: '#c678dd'
+      cyan:    '#56b6c2'
+      white:   '#ffffff'
+  # Colors (Solarized Dark)
+  solarized_dark: &solarized_dark
+    # Default colors
+    primary:
+      background: '#002b36' # base03
+      foreground: '#839496' # base0
+
+    # Cursor colors
+    cursor:
+      text:   '#002b36' # base03
+      cursor: '#839496' # base0
+
+    # Normal colors
+    normal:
+      black:   '#073642' # base02
+      red:     '#dc322f' # red
+      green:   '#859900' # green
+      yellow:  '#b58900' # yellow
+      blue:    '#268bd2' # blue
+      magenta: '#d33682' # magenta
+      cyan:    '#2aa198' # cyan
+      white:   '#eee8d5' # base2
+
+    # Bright colors
+    bright:
+      black:   '#586e75' # base01
+      red:     '#cb4b16' # orange
+      green:   '#586e75' # base01
+      yellow:  '#657b83' # base00
+      blue:    '#839496' # base0
+      magenta: '#6c71c4' # violet
+      cyan:    '#93a1a1' # base1
+      white:   '#fdf6e3' # base3
+  # Colors (Solarized Light)
+  solarized_light: &solarized_light
+    # Default colors
+    primary:
+      background: '#fdf6e3' # base3
+      foreground: '#657b83' # base00
+
+    # Cursor colors
+    cursor:
+      text:   '#fdf6e3' # base3
+      cursor: '#657b83' # base00
+
+    # Normal colors
+    normal:
+      black:   '#073642' # base02
+      red:     '#dc322f' # red
+      green:   '#859900' # green
+      yellow:  '#b58900' # yellow
+      blue:    '#268bd2' # blue
+      magenta: '#d33682' # magenta
+      cyan:    '#2aa198' # cyan
+      white:   '#eee8d5' # base2
+
+    # Bright colors
+    bright:
+      black:   '#002b36' # base03
+      red:     '#cb4b16' # orange
+      green:   '#586e75' # base01
+      yellow:  '#657b83' # base00
+      blue:    '#839496' # base0
+      magenta: '#6c71c4' # violet
+      cyan:    '#93a1a1' # base1
+      white:   '#fdf6e3' # base3
+
+
+colors: *one_dark
+
+
+# indexed_colors: []

@@ -9,7 +9,8 @@ export PATH="$CONFIG_DIR/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
 # window manager
-export MY_WM="i3"
+# export MY_WM="i3"
+export MY_WM="dwm"
 
 # Default programs:
 export EDITOR="nvim"
@@ -17,7 +18,7 @@ export VISUAL='nvim'
 export TERMINAL="alacritty"
 export BROWSER="firefox"
 export READER="zathura"
-export FILE="n"
+export FILE="nnn"
 export STATUSBAR="${MY_WM}blocks"
 
 export INPUTRC="$CONFIG_DIR/inputrc"
@@ -37,12 +38,10 @@ export LESS_TERMCAP_se="$(printf '%b' '[0m')"
 export LESS_TERMCAP_us="$(printf '%b' '[1;32m')"
 export LESS_TERMCAP_ue="$(printf '%b' '[0m')"
 
-# vi mode in bash
-set -o vi
 
-# prompt
-export PS1='\[\033[01;32m\][\u@\h\[\033[01;37m\] \W\[\033[01;32m\]]\$\[\033[00m\] '
-#PS1='[\u@\h \W]\$ '
+# read .bashrc
+if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
+
 
 mpd >/dev/null 2>&1 &
 
@@ -75,6 +74,20 @@ export FZF_DEFAULT_OPTS="--layout=reverse --height 40%"
 # navi cheats
 # export NAVI_PATH="/home/vik/docs/cheat-sheets"
 
+
+# nnn
+# bookmarks
+export NNN_BMS='d:~/docs/;D:~/Downloads/;c:~/docs/cloud/;s:~/docs/screenshots/;w:~/docs/work/'
+export NNN_USE_EDITOR=1                                 # use the $EDITOR when opening text files
+# export NNN_SSHFS_OPTS="sshfs -o follow_symlinks"        # make sshfs follow symlinks on the remote
+# export NNN_COLORS="2136"                        # use a different color for each context
+# export NNN_TRASH=1                                      # trash (needs trash-cli) instead of delete
+# promp indicating shell exit will take you back to nnn
+[ -n "$NNNLVL" ] && PS1="N$NNNLVL $PS1"
+
+
+# nnn plugins
+export NNN_PLUG='o:fzopen;p:mocplay;d:diffs;m:nmount;n:notes;v:imgviu;t:imgthumb'
 
 
 # Load the shell dotfiles, and then some:
@@ -110,13 +123,6 @@ else
   # export NVM_DIR="$HOME/.nvm"
   # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 fi
-
-
-
-
-export LF_ICONS="di=:fi=:ln=:or=:ex=:*.c=:*.cc=:*.clj=:*.coffee=:*.cpp=:*.css=:*.d=:*.dart=:*.erl=:*.exs=:*.fs=:*.go=:*.h=:*.hh=:*.hpp=:*.hs=:*.html=:*.java=:*.jl=:*.js=:*.json=:*.lua=:*.md=:*.php=:*.pl=:*.pro=:*.py=:*.rb=:*.rs=:*.scala=:*.ts=:*.vim=:*.cmd=:*.ps1=:*.sh=:*.bash=:*.zsh=:*.fish=:*.tar=:*.tgz=:*.arc=:*.arj=:*.taz=:*.lha=:*.lz4=:*.lzh=:*.lzma=:*.tlz=:*.txz=:*.tzo=:*.t7z=:*.zip=:*.z=:*.dz=:*.gz=:*.lrz=:*.lz=:*.lzo=:*.xz=:*.zst=:*.tzst=:*.bz2=:*.bz=:*.tbz=:*.tbz2=:*.tz=:*.deb=:*.rpm=:*.jar=:*.war=:*.ear=:*.sar=:*.rar=:*.alz=:*.ace=:*.zoo=:*.cpio=:*.7z=:*.rz=:*.cab=:*.wim=:*.swm=:*.dwm=:*.esd=:*.jpg=:*.jpeg=:*.mjpg=:*.mjpeg=:*.gif=:*.bmp=:*.pbm=:*.pgm=:*.ppm=:*.tga=:*.xbm=:*.xpm=:*.tif=:*.tiff=:*.png=:*.svg=:*.svgz=:*.mng=:*.pcx=:*.mov=:*.mpg=:*.mpeg=:*.m2v=:*.mkv=:*.webm=:*.ogm=:*.mp4=:*.m4v=:*.mp4v=:*.vob=:*.qt=:*.nuv=:*.wmv=:*.asf=:*.rm=:*.rmvb=:*.flc=:*.avi=:*.fli=:*.flv=:*.gl=:*.dl=:*.xcf=:*.xwd=:*.yuv=:*.cgm=:*.emf=:*.ogv=:*.ogx=:*.aac=:*.au=:*.flac=:*.m4a=:*.mid=:*.midi=:*.mka=:*.mp3=:*.mpc=:*.ogg=:*.ra=:*.wav=:*.oga=:*.opus=:*.spx=:*.xspf=:*.pdf="
-
-
 
 # Start graphical server on tty1 if not already running.
 [ "$(tty)" = "/dev/tty1" ] && ! pgrep -x Xorg >/dev/null && exec startx

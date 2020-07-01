@@ -1,0 +1,9 @@
+mic_state=`amixer get Capture | grep '\[off\]'`
+
+if [ -z "$mic_state" ]
+then
+    echo '{"icon":"custom_mic_on","state":"Critical","text":""}'
+else
+    echo '{"icon":"custom_mic_off","state":"Good","text":""}'
+fi
+

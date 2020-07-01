@@ -1,7 +1,12 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =5
+let g:netrw_dirhistcnt =2
+let g:netrw_dirhist_2='/home/vik/docs/work/mtbe3/rest/unit_type'
+let g:netrw_dirhist_1='/home/vik/docs/work/go_config_demo'
+let g:netrw_dirhist_0='/home/vik/docs/work/temp'
+let g:netrw_dirhist_9='/home/vik/docs'
+let g:netrw_dirhist_8='/home/vik/docs/cloud/dropbox_b1'
+let g:netrw_dirhist_7='/home/vik/docs/work/mtdb/.git'
+let g:netrw_dirhist_6='/home/vik/.config/dunst'
 let g:netrw_dirhist_5='/home/vik/docs/work/sqls/tables'
 let g:netrw_dirhist_4='/home/vik/docs/work/sqls'
 let g:netrw_dirhist_3='/home/vik/temp'
-let g:netrw_dirhist_2='/home/vik/temp/temp_walls'
-let g:netrw_dirhist_1='/home/vik/docs/work/mobile_app2'

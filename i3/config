@@ -64,16 +64,18 @@ bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
 # workspace variables
-set $ws1 "1<span color='#33bdf5'>:</span>"
-set $ws2 "2<span color='#ffff33'>:</span>"
-set $ws3 "3<span color='#ff79c6'>:</span>"
+set $ws1 "1<span color='#33bdf5'>:</span>"
+set $ws2 "2<span color='#ffff33'>:</span>"
+set $ws3 "3<span color='#ff79c6'>:</span>"
 set $ws4 "4<span color='#00A1F1'>:</span>"
-set $ws5 "5<span color='#F65314'>:</span>"
-set $ws6 "6<span color='#bd93f9'>:</span>"
-set $ws7 "7<span color='#ff5555'>:</span>"
-set $ws8 "8<span color='#ffb86c'>:</span>"
-set $ws9 "9<span color='#8be9fd'>:</span>"
-set $ws10 "10<span color='#50fa7b'>:</span>"
+set $ws5 "5<span color='#F65314'>:</span>"
+set $ws6 "6<span color='#bd93f9'>:</span>"
+set $ws7 "7<span color='#ff5555'>:</span>"
+set $ws8 "8<span color='#ffb86c'>:</span>"
+set $ws9 "9<span color='#8be9fd'>:</span>"
+set $ws10 "10<span color='#50fa7b'>:</span>"
+
+
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -174,18 +176,6 @@ mode "$mode_system" {
     bindsym Escape mode "default"
 }
 
-# colors
-#set $bgcolor 00293c
-set $bgcolor 002b36
-#set $fgcolor 5ea8a7
-set $fgcolor 268bd2
-set $txtcolor f0eff0
-set $faded_txt_color 657b83
-#set $urgent ff4447
-#set $urgent cb4b16
-set $urgent dc322f
-set $border 5ea8a7
-
 #set $launcher dmenu_run -i -nb '#00293c' -nf '#f0eff0' -sb '#5ea8a7' -sf '#00293c'
 # start dmenu (a program launcher)
 # bindsym $mod+d exec dmenu_run
@@ -204,27 +194,19 @@ bindsym $mod+d exec $launcher
 bindsym $mod+t bar mode toggle
 
 bar {
-  # font pango:Fantasque Sans Mono, Font Awesome 5 Free, Noto Color Emoji 8
-  # font pango:Fantasque Sans Mono 8
   font pango:DejaVu Sans Mono, FontAwesome5Free 12, FontAwesome5Brands 12
   position bottom
+
   colors {
     background #282A36
     statusline #e1e5ee
     separator  #44475A
-    focused_workspace  #44475A #44475A #F8F8F2
-    active_workspace   #282A36 #44475A #F8F8F2
+    #                  border  backgr  text
+    focused_workspace  #2A9D8F #44475A #FFFFFF
+    active_workspace   #00A9E2 #44475A #F8F8F2
     inactive_workspace #282A36 #282A36 #BFBFBF
     urgent_workspace   #FF5555 #FF5555 #F8F8F2
     binding_mode       #FF5555 #FF5555 #F8F8F2
-
-    # separator #666666
-    # background #222222
-    # statusline #dddddd
-    # focused_workspace #0088CC #0088CC #ffffff
-    # active_workspace #333333 #333333 #ffffff
-    # inactive_workspace #333333 #333333 #888888
-    # urgent_workspace #2f343a #900000 #ffffff
   }
 
   # status_command i3blocks
@@ -264,14 +246,7 @@ default_border pixel 1
 # Hide borders
 hide_edge_borders both
 
-# Layout colors            border       bg        text
-#client.focused             #$border #$border #$txtcolor
-#client.unfocused           #$border #$border #$txtcolor
-#client.focused_inactive    #$border #$border #$txtcolor
-#client.urgent              #$urgent    #$bgcolor  #$txtcolor
-#client.background          #$bgcolor
-
-#https://github.com/dracula/i3
+# https://github.com/dracula/i3
 # class                 border  bground text    indicator child_border
 client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4
 client.focused_inactive #44475A #44475A #F8F8F2 #44475A   #44475A

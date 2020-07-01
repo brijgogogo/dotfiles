@@ -1,26 +1,31 @@
 theme = "solarized-dark"
 
+
 [icons]
 name = "awesome"
 [icons.overrides]
 cpu = "\uf2db "
 memory_mem = "\uf538 "
 memory_swap = "\uf538 "
+custom_wifi = "\uf1eb"
+custom_nowifi = "\uf884"
+custom_ethernet = "\uf6ff"
+music = "\uf186"
+custom_mic_on = "\uf130"
+custom_mic_off = "\uf131"
 
 [[block]]
 block = "focused_window"
 max_width = 30
 
 [[block]]
-block = "net"
-device = "wlp0s20f3"
-ssid = false
-signal_strength = true
-ip = true
-speed_up = true
-graph_up = false
-interval = 5
-use_bits = false
+block = "custom"
+command = "~/.config/i3/scripts/i3-wifi-state"
+json = true
+
+[[block]]
+block = "music"
+buttons = ["prev", "play", "next"]
 
 [[block]]
 block = "disk_space"
@@ -46,12 +51,19 @@ format = "{average}°"
 chip = "*-isa-*"
 
 [[block]]
+block = "custom"
+on_click = "toggle-mic"
+command = "~/.config/i3/scripts/mic-state"
+json = true
+
+[[block]]
 block = "sound"
 
 [[block]]
 block = "battery"
 # driver = "upower"
-format = "{percentage}% {time} {power}"
+# format = "{percentage}% {time} {power}"
+format = "{percentage}%"
 
 [[block]]
 block = "time"

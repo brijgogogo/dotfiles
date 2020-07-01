@@ -1,0 +1,19 @@
+wifi_name=`iw dev | grep ssid | awk '{print $2}'`
+
+if [ -z "$wifi_name" ]
+then
+  ip_route=`ip route`
+
+  if [ -z "$ip_route" ]
+  then
+    echo '{"icon":"custom_nowifi","state":"Critical","text":""}'
+  else
+    # ip_addr=`ip route get 1.2.3.4 | awk '{print $7}'`
+    # echo "{\"icon\": \"custom_ethernet\", \"text\": \" $ip_addr\"}"
+    echo "{\"icon\": \"custom_ethernet\", \"text\": \"\"}"
+  fi
+else
+ # echo "{\"icon\": \"custom_wifi\", \"text\": \" $wifi_name\"}"
+ echo "{\"icon\": \"custom_wifi\", \"text\": \" $wifi_name\"}"
+fi
+

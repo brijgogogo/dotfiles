@@ -19,6 +19,7 @@ alias \
 	yta="yt -x -f bestaudio/best" \
 	ffmpeg="ffmpeg -hide_banner"
 
+# alias ls='ls --color=auto'
 # Colorize commands when possible.
 alias \
 	ls="ls -hN --color=auto --group-directories-first" \
@@ -108,21 +109,20 @@ alias g="git"
 
 
 
-alias ls='ls --color=auto'
 
 alias visudo='sudo EDITOR="$EDITOR" visudo'
 
 # color for common commands
 # tutorial video: http://www.youtube.com/watch?v=RbVCzxnKJL4
-if [ -x /usr/bin/dircolors ]; then
-    eval "`dircolors -b`"
-    alias ls='ls --color=auto'
-    alias dir='dir --color=auto'
-    alias vdir='vdir --color=auto'
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
+# if [ -x /usr/bin/dircolors ]; then
+    # eval "`dircolors -b`"
+    # alias ls='ls --color=auto'
+    # alias dir='dir --color=auto'
+    # alias vdir='vdir --color=auto'
+    # alias grep='grep --color=auto'
+    # alias fgrep='fgrep --color=auto'
+    # alias egrep='egrep --color=auto'
+# fi
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '

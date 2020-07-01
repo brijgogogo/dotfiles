@@ -14,6 +14,7 @@ pacman -S xrandr autorandr
 yay 2-monitor
 # audio
 pacman -S alsa-utils pulseaudio pulseaudio-alsa pavucontrol
+pacman -S xorg-xsetroot
 
 sudo pacman -S gnu-netcat
 yay sopcast
@@ -74,5 +75,9 @@ ln -s ${BASEDIR}/root/etc/X11/xorg.conf.d/00-keyboard.conf /etc/X11/xorg.conf.d/
 
 # packages
 # rofi-calc
+
+# suckless slock
+sudo groupadd nogroup
+sudo usermod -a -G ngroup vik
 
 
